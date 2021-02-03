@@ -11,6 +11,7 @@ function buildHMSClient() {
         x.style.zIndex = "999999";
         document.body.appendChild(x);
         document.getElementById("HMSClientWindow").appendChild(newDiv("HMSClientWindow-header"))
+        document.getElementById("HMSClientWindow-header").innerHTML = "HMS Client";
         for(i=0;i<modules.length;i++) {
                 document.getElementById("HMSClientWindow").appendChild(newButton((modules[i].getModuleId()), (modules[i].getModuleName()), i))
         }
