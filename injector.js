@@ -1,6 +1,8 @@
+//javascript:(function () {var script = document.createElement('script');script.id="HMSClientInjectorScript";script.src="https://grajkogj.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())
+
 const client_files = [
         //Runtime Files:
-        'https://grajkogj.github.io/HMSClient.github.io/injector.js',
+        //'https://grajkogj.github.io/HMSClient.github.io/injector.js',
         'https://grajkogj.github.io/HMSClient.github.io/index.js',
         'https://grajkogj.github.io/HMSClient.github.io/ClientBase/BuildTools.js',
         'https://grajkogj.github.io/HMSClient.github.io/ClientBase/ModuleManager.js',
@@ -11,7 +13,7 @@ const client_files = [
 
 const client_dev_files = [
         //Runtime Files:
-        'injector.js',
+        //'injector.js',
         'index.js',
         'ClientBase/BuildTools.js',
         'ClientBase/ModuleManager.js',
