@@ -22,4 +22,5 @@ function initModules() {
         modules.push(MembeanAC_Module);
 
 }
+setTimeout(initModules(), 500);
 
