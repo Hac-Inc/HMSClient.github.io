@@ -1,4 +1,4 @@
-setTimeout(initModules(), 100);
+setTimeout(initModules(), 1000);
 function buildHMSClient() {
         let x = document.createElement('div');
         x.id = "HMSClientWindow"
