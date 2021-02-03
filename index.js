@@ -11,6 +11,6 @@ function buildHMSClient() {
         document.body.appendChild(x);
         document.getElementById("HMSClientWindow").appendChild(newDiv("HMSClientWindow-header"))
         for(i=0;i<=modules.length;i++) {
-                document.getElementById("HMSClientWindow").appendChild(newButton(modules[i].getModuleId(), modules[i].getModuleName(), modules[i].execute()))
+                document.getElementById("HMSClientWindow").appendChild(newButton((modules[i].moduleId), (modules[i].moduleName), (modules[i].execute())))
         }
 }
