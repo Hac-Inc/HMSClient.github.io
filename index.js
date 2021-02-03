@@ -1,4 +1,3 @@
-setTimeout(initModules(), 1000);
 function buildHMSClient() {
         let x = document.createElement('div');
         x.id = "HMSClientWindow"
@@ -7,6 +6,8 @@ function buildHMSClient() {
         x.style.border = "solid";
         x.style.borderWidth = "1px";
         x.style.position = "absolute";
+        x.style.top = "20px";
+        x.style.left = "20px";
         x.style.zIndex = "999999";
         document.body.appendChild(x);
         document.getElementById("HMSClientWindow").appendChild(newDiv("HMSClientWindow-header"))
