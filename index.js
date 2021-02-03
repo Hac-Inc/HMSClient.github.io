@@ -15,7 +15,9 @@ function buildHMSClient() {
         document.getElementById("HMSClientWindow-header").style.cursor = "move";
         dragElement(document.getElementById("HMSClientWindow"));
         for(i=0;i<modules.length;i++) {
-                document.getElementById("HMSClientWindow").appendChild(newButton((modules[i].getModuleId()), (modules[i].getModuleName()), i))
+                document.getElementById("HMSClientWindow").appendChild(newButton((modules[i].getModuleId()), (modules[i].getModuleName()), i));
+                let br = document.createElement('br');
+                document.getElementById("HMSClientWindow").appendChild(br);
         }
 }
 
