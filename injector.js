@@ -1,4 +1,4 @@
-const files = [
+const client_files = [
         //Runtime Files:
         'https://grajkogj.github.io/HMSClient.github.io/injector.js',
         'https://grajkogj.github.io/HMSClient.github.io/index.js',
@@ -9,7 +9,7 @@ const files = [
 
 ]
 
-const dev_files = [
+const client_dev_files = [
         //Runtime Files:
         'injector.js',
         'index.js',
@@ -20,16 +20,16 @@ const dev_files = [
 ]
 
 function inject() {
-        for(i=0;i<=files.length;i++) {
+        for(i=0;i<=client_files.length;i++) {
                 x = document.createElement('script');
-                x.src = files[i];
+                x.src = client_files[i];
                 document.head.appendChild(x);
         }
 }
 function injectDev() {
-        for(i=0;i<=files.length;i++) {
+        for(i=0;i<=client_dev_files.length;i++) {
                 x = document.createElement('script');
-                x.src = files[i];
+                x.src = client_dev_files[i];
                 document.head.appendChild(x);
         }
 }
