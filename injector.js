@@ -7,7 +7,10 @@ const client_files = [
         'https://grajkogj.github.io/HMSClient.github.io/ClientBase/BuildTools.js',
         'https://grajkogj.github.io/HMSClient.github.io/ClientBase/ModuleManager.js',
         //Modules:
-        'https://grajkogj.github.io/HMSClient.github.io/ClientBase/Modules/MembeanAC.js'
+        'https://grajkogj.github.io/HMSClient.github.io/ClientBase/Modules/MembeanAC.js',
+
+        //Compilers:
+        'https://grajkogj.github.io/HMSClient.github.io/ClientBase/ModuleInitalizer.js'
 
 ]
 
@@ -22,14 +25,15 @@ const client_dev_files = [
 ]
 
 function inject() {
-        for(i=0;i<=client_files.length;i++) {
+        for(i=0;i<client_files.length;i++) {
                 x = document.createElement('script');
                 x.src = client_files[i];
+                x.defer = true;
                 document.head.appendChild(x);
         }
 }
 function injectDev() {
-        for(i=0;i<=client_dev_files.length;i++) {
+        for(i=0;i<client_dev_files.length;i++) {
                 x = document.createElement('script');
                 x.src = client_dev_files[i];
                 document.head.appendChild(x);
