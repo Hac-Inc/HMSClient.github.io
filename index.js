@@ -1,4 +1,5 @@
 function buildHMSClient() {
+        initModules();
         let x = document.createElement('div');
         x.id = "HMSClientWindow"
         x.style.padding = "5px;";
