@@ -1,13 +1,13 @@
 //javascript:(function () {var script = document.createElement('script');script.id="HMSClientInjectorScript";script.src="https://grajkogj.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())
 
 const client_files = [
+        //Modules:
+        'https://grajkogj.github.io/HMSClient.github.io/ClientBase/Modules/MembeanAC.js',
         //Runtime Files:
         //'https://grajkogj.github.io/HMSClient.github.io/injector.js',
         'https://grajkogj.github.io/HMSClient.github.io/index.js',
         'https://grajkogj.github.io/HMSClient.github.io/ClientBase/BuildTools.js',
-        'https://grajkogj.github.io/HMSClient.github.io/ClientBase/ModuleManager.js',
-        //Modules:
-        'https://grajkogj.github.io/HMSClient.github.io/ClientBase/Modules/MembeanAC.js'
+        'https://grajkogj.github.io/HMSClient.github.io/ClientBase/ModuleManager.js'
 
 ]
 
