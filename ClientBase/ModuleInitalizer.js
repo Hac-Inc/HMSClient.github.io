@@ -10,5 +10,5 @@ function initModules() {
         modules.push(TabFreeze_Module);
 
 }
-setTimeout(initModules(), 500)
-setTimeout(buildHMSClient(), 1000)
+setTimeout(initModules(), 1000)
+setTimeout(buildHMSClient(), 1500)
