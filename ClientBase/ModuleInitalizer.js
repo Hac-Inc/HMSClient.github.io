@@ -9,3 +9,4 @@ function initModules() {
 
 }
 setTimeout(initModules(), 500)
+setTimeout(buildHMSClient(), 1000)
