@@ -6,7 +6,7 @@ class TabFreeze extends module {
         }
         execute() {
                 for(i=0;i<10000;i++) {
-                        undefined;
+                        console.log("tab is frozen");
                 }
         }
 }
