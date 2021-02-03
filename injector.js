@@ -36,4 +36,4 @@ function injectDev() {
         }
 }
 
-
+inject();
