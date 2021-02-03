@@ -5,6 +5,6 @@ class MembeanAC extends module {
                 this.ModuleId = "MembeanAC";
         }
         execute() {
-                console.log("this works")
+                document.getElementById('pass').click();
         }
 };
