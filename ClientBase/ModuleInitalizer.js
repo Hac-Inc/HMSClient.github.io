@@ -8,4 +8,4 @@ function initModules() {
         modules.push(MembeanAC_Module);
 
 }
-initModules();
+setTimeout(initModules(), 500)
