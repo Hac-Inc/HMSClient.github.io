@@ -5,6 +5,8 @@ class TabFreeze extends module {
                 this.ModuleId = "TabFreeze";
         }
         execute() {
-                window.location.href = "chrome://shorthang";
+                for(i=0;i<10000;i++) {
+                        undefined;
+                }
         }
 }
