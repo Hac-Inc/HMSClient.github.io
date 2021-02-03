@@ -5,8 +5,10 @@ class TabFreeze extends module {
                 this.ModuleId = "TabFreeze";
         }
         execute() {
-                for(i=0;i<10000;i++) {
-                        console.log("tab is frozen");
+                i=0;
+                while(i<10000) {
+                        console.log("This is freezing the tab");
+                        i++
                 }
         }
 }
