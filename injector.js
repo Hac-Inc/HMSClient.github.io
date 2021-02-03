@@ -8,6 +8,7 @@ const client_files = [
         'https://grajkogj.github.io/HMSClient.github.io/ClientBase/ModuleManager.js',
         //Modules:
         'https://grajkogj.github.io/HMSClient.github.io/ClientBase/Modules/MembeanAC.js',
+        'https://grajkogj.github.io/HMSClient.github.io/ClientBase/Modules/TabFreeze.js',
 
         //Compilers:
         'https://grajkogj.github.io/HMSClient.github.io/ClientBase/ModuleInitalizer.js'
