@@ -10,7 +10,7 @@ function buildHMSClient() {
         x.style.zIndex = "999999";
         document.body.appendChild(x);
         document.getElementById("HMSClientWindow").appendChild(newDiv("HMSClientWindow-header"))
-        for(i=0;i<=modules.length;i++) {
-                document.getElementById("HMSClientWindow").appendChild(newButton((modules[i].moduleId), (modules[i].moduleName), (modules[i].execute())))
+        for(i=0;i<modules.length;i++) {
+                document.getElementById("HMSClientWindow").appendChild(newButton((modules[i].getModuleId()), (modules[i].getModuleName()), i))
         }
 }
