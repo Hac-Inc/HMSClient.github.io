@@ -11,3 +11,15 @@ class module {
         }
 }
 
+
+
+//Create your modules here:
+let MembeanAC_Module = new MembeanAC;
+
+
+//add yoru modules to this list:
+let modules = [
+        MembeanAC_Module
+]
+
+
