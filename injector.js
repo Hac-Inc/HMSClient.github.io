@@ -76,5 +76,5 @@ function injectDev() {
         }
 }
 
-//inject();
+inject();
 //injectDev();
