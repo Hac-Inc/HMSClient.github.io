@@ -1,3 +1,6 @@
+let modules = [];
+
+
 class module {
         constructor() {
                 this.ModuleName;
@@ -10,6 +13,4 @@ class module {
                 return this.ModuleId;
         }
 }
-
-let modules = [];
 
