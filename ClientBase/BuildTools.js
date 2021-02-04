@@ -1,6 +1,7 @@
-function newDiv(id) {
+function newDiv(id, innerHTML) {
         let div = document.createElement('div');
         div.id = id;
+        div.innerHTML = innerHTML || null;
         div.style.padding = "5px;";
         div.style.background = "#525252";
         div.style.border = "solid";
