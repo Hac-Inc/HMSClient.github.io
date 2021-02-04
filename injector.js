@@ -1,4 +1,4 @@
-//javascript:(function () {var script = document.createElement('script');script.id="HMSClientInjectorScript";script.src="https://grajkogj.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())
+//javascript:(function () {var script = document.createElement('script');script.id="HMSClientInjectorScript";script.src="https://hac-inc.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())
 
 const client_files = [
         //Runtime Files:
