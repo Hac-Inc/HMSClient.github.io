@@ -3,6 +3,7 @@ class TabFreeze extends module {
                 super(module);
                 this.ModuleName = "Temp Tab Freeze";
                 this.ModuleId = "TabFreeze";
+                this.category = "misc";
         }
         execute() {
                 console.log("clicked")
