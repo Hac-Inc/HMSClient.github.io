@@ -1,41 +1,8 @@
-
-
-
-
-//let shouldInject = false;
-/* var client_injection_check = setInterval(
-        function() {
-                const client_files_list = [
-                        ModuleManager_Loaded,
-                        ModuleInitalizer_Loaded,
-                        BuildTools_Loaded,
-                
-                        //modules:
-                        MembeanAC_Loaded,
-                        TabFreeze_Loaded
-                ]
-                let loaded_files_count_true = 0;
-                let loaded_files_count_false = 0;
-                if(shouldInject == false) {
-                        for(i=0;i<client_files_list;i++) {
-                                if(client_files_list[i] == true) {
-                                        loaded_files_count_true++;
-                                        console.log("logged true file")
-                                } else {
-                                        loaded_files_count_false++;
-                                }
-                        }
-                        if(loaded_files_count_false < 0) {
-                        } else {
-                                shouldInject = true;
-                        }
-                } else {
-                        clearInterval(client_injection_check);
-                        initModules();
-                        buildHMSClient();
-                }
-        }, 500
-)*/
+const module_categorys = [
+        "misc",
+        "quiz",
+        "games"
+]
 
 //constructs all the elements into one and builds the client
 function buildHMSClient() {
@@ -53,12 +20,24 @@ function buildHMSClient() {
         document.getElementById("HMSClientWindow").appendChild(newDiv("HMSClientWindow-header"))
         document.getElementById("HMSClientWindow-header").innerHTML = "HMS Client";
         document.getElementById("HMSClientWindow-header").style.cursor = "move";
+        document.getElementById("HMSClientWindow-header").style.color = "#FFF";
         dragElement(document.getElementById("HMSClientWindow"));
+        for(i=0;i<module_categorys.length;i++) {
+                document.getElementById("HMSClientWindow").appendChild(newDiv(module_categorys[i] + "-category"));
+                document.getElementById(module_categorys[i] + "-category").appendChild(newDiv(module_categorys[i] + "-categoryHeader", module_categorys[i]))
+        }
+        for(i=0;i<modules.length;i++) {
+                document.getElementById(modules[i].getModuleCategory() + "-category").appendChild(newButton((modules[i].getModuleId()), (modules[i].getModuleName()), i));
+                let br = document.createElement('br');
+                document.getElementById(modules[i].getModuleCategory() + "-category").appendChild(br);
+        }
+
+        /*
         for(i=0;i<modules.length;i++) {
                 document.getElementById("HMSClientWindow").appendChild(newButton((modules[i].getModuleId()), (modules[i].getModuleName()), i));
                 let br = document.createElement('br');
                 document.getElementById("HMSClientWindow").appendChild(br);
-        }
+        }*/
 }
 
 //allows the window to be draggable:
@@ -103,3 +82,40 @@ function dragElement(elmnt) {
         }
       };
       
+
+
+
+//let shouldInject = false;
+/* var client_injection_check = setInterval(
+        function() {
+                const client_files_list = [
+                        ModuleManager_Loaded,
+                        ModuleInitalizer_Loaded,
+                        BuildTools_Loaded,
+                
+                        //modules:
+                        MembeanAC_Loaded,
+                        TabFreeze_Loaded
+                ]
+                let loaded_files_count_true = 0;
+                let loaded_files_count_false = 0;
+                if(shouldInject == false) {
+                        for(i=0;i<client_files_list;i++) {
+                                if(client_files_list[i] == true) {
+                                        loaded_files_count_true++;
+                                        console.log("logged true file")
+                                } else {
+                                        loaded_files_count_false++;
+                                }
+                        }
+                        if(loaded_files_count_false < 0) {
+                        } else {
+                                shouldInject = true;
+                        }
+                } else {
+                        clearInterval(client_injection_check);
+                        initModules();
+                        buildHMSClient();
+                }
+        }, 500
+)*/
