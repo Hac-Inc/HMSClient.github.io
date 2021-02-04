@@ -22,22 +22,55 @@ const client_dev_files = [
         'ClientBase/BuildTools.js',
         'ClientBase/ModuleManager.js',
         //Modules:
-        'ClientBase/Modules/MembeanAC.js'
+        'ClientBase/Modules/MembeanAC.js',
+        'ClientBase/Modules/TabFreeze.js',
+
+        //Compilers:
+        'ClientBase/ModuleInitalizer.js'
 ]
 
 function inject() {
-        for(i=0;i<client_files.length;i++) {
-                x = document.createElement('script');
-                x.src = client_files[i];
-                x.defer = true;
-                document.head.appendChild(x);
+        if(document.getElementById("HMSClientScriptBundle")) {
+                document.getElementById("HMSClientScriptBundle").remove();
+                s = document.createElement('section');
+                s.id = "HMSClientScriptBundle";
+                document.head.appendChild(s);
+                for(i=0;i<client_files.length;i++) {
+                        x = document.createElement('script');
+                        x.src = client_files[i];
+                        document.getElementById("HMSClientScriptBundle").appendChild(x);
+                }
+        } else {
+                s = document.createElement('section');
+                s.id = "HMSClientScriptBundle";
+                document.head.appendChild(s);
+                for(i=0;i<client_files.length;i++) {
+                        x = document.createElement('script');
+                        x.src = client_files[i];
+                        document.getElementById("HMSClientScriptBundle").appendChild(x);
+                }
         }
 }
 function injectDev() {
-        for(i=0;i<client_dev_files.length;i++) {
-                x = document.createElement('script');
-                x.src = client_dev_files[i];
-                document.head.appendChild(x);
+        if(document.getElementById("HMSClientScriptBundle")) {
+                document.getElementById("HMSClientScriptBundle").remove();
+                s = document.createElement('section');
+                s.id = "HMSClientScriptBundle";
+                document.head.appendChild(s);
+                for(i=0;i<client_dev_files.length;i++) {
+                        x = document.createElement('script');
+                        x.src = client_dev_files[i];
+                        document.getElementById("HMSClientScriptBundle").appendChild(x);
+                }
+        } else {
+                s = document.createElement('section');
+                s.id = "HMSClientScriptBundle";
+                document.head.appendChild(s);
+                for(i=0;i<client_dev_files.length;i++) {
+                        x = document.createElement('script');
+                        x.src = client_dev_files[i];
+                        document.getElementById("HMSClientScriptBundle").appendChild(x);
+                }
         }
 }
 

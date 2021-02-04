@@ -1,3 +1,43 @@
+
+
+
+
+//let shouldInject = false;
+/* var client_injection_check = setInterval(
+        function() {
+                const client_files_list = [
+                        ModuleManager_Loaded,
+                        ModuleInitalizer_Loaded,
+                        BuildTools_Loaded,
+                
+                        //modules:
+                        MembeanAC_Loaded,
+                        TabFreeze_Loaded
+                ]
+                let loaded_files_count_true = 0;
+                let loaded_files_count_false = 0;
+                if(shouldInject == false) {
+                        for(i=0;i<client_files_list;i++) {
+                                if(client_files_list[i] == true) {
+                                        loaded_files_count_true++;
+                                        console.log("logged true file")
+                                } else {
+                                        loaded_files_count_false++;
+                                }
+                        }
+                        if(loaded_files_count_false < 0) {
+                        } else {
+                                shouldInject = true;
+                        }
+                } else {
+                        clearInterval(client_injection_check);
+                        initModules();
+                        buildHMSClient();
+                }
+        }, 500
+)*/
+
+//constructs all the elements into one and builds the client
 function buildHMSClient() {
         let x = document.createElement('div');
         x.id = "HMSClientWindow"
