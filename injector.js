@@ -9,6 +9,7 @@ const client_files = [
         //Modules:
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/MembeanAC.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/TabFreeze.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/TabDisguise.js',
 
         //Compilers:
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleInitalizer.js'
@@ -24,6 +25,7 @@ const client_dev_files = [
         //Modules:
         'ClientBase/Modules/MembeanAC.js',
         'ClientBase/Modules/TabFreeze.js',
+        'ClientBase/Modules/TabDisguise.js',
 
         //Compilers:
         'ClientBase/ModuleInitalizer.js'
@@ -74,5 +76,5 @@ function injectDev() {
         }
 }
 
-inject();
+//inject();
 //injectDev();
