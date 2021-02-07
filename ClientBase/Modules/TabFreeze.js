@@ -1,7 +1,7 @@
 class TabFreeze extends module {
         constructor() {
                 super(module);
-                this.ModuleName = "Temp Tab Freeze";
+                this.ModuleName = "Tab Freezer";
                 this.ModuleId = "TabFreeze";
                 this.category = "misc";
         }
