@@ -7,10 +7,9 @@ class TabFreeze extends module {
         }
         execute() {
                 console.log("clicked")
-                i=0;
-                while(i<10000) {
-                        console.log("This is freezing the tab");
-                        i++
+                while(true) {
+                        let f = document.createElement('section');
+                        document.body.appendChild(f);
                 }
         }
 }
