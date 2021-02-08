@@ -1,8 +1,29 @@
+class module_sub_category {
+        constructor(name, parent) {
+                this.name = name;
+                this.parentCategory = parent;
+        }
+}
+
+//create your subcategorys here:
+let misc_Subcategory = new module_sub_category("misc", "misc");
+let tab_Subcategory = new module_sub_category("tab", "misc");
+let membean_Subcategory = new module_sub_category("membean", "quiz");
+let paperclips_Subcategory = new module_sub_category("paperclips", "games");
+
+
 const module_categorys = [
         "misc",
         "quiz",
         "games"
 ]
+const module_sub_categorys = [
+        misc_Subcategory,
+        tab_Subcategory,
+        membean_Subcategory,
+        paperclips_Subcategory
+]
+
 
 //constructs all the elements into one and builds the client
 function buildHMSClient() {
@@ -24,12 +45,20 @@ function buildHMSClient() {
         dragElement(document.getElementById("HMSClientWindow"));
         for(i=0;i<module_categorys.length;i++) {
                 document.getElementById("HMSClientWindow").appendChild(newDiv(module_categorys[i] + "-category"));
-                document.getElementById(module_categorys[i] + "-category").appendChild(newDiv(module_categorys[i] + "-categoryHeader", module_categorys[i]))
+                document.getElementById(module_categorys[i] + "-category").appendChild(newDiv(module_categorys[i] + "-categoryHeader", '<font color="lime">' + module_categorys[i] + '</font>'))
+                let br = document.createElement('div');
+                br.style.background = "rgb(0, 0, 0, 1)";
+                br.style.height = "10px";
+                document.getElementById("HMSClientWindow").appendChild(br);
+        }
+        for(i=0;i<module_sub_categorys.length;i++) {
+                document.getElementById(module_sub_categorys[i].parentCategory + "-category").appendChild(newDiv(module_sub_categorys[i].name + "-subCategory"))
+                document.getElementById(module_sub_categorys[i].name + "-subCategory").appendChild(newDiv(module_sub_categorys[i].name + "-subCategoryHeader", '<font color="green">' + module_sub_categorys[i].name + '</font>'));
         }
         for(i=0;i<modules.length;i++) {
-                document.getElementById(modules[i].getModuleCategory() + "-category").appendChild(newButton((modules[i].getModuleId()), (modules[i].getModuleName()), i));
+                document.getElementById(modules[i].getModuleCategory() + "-subCategory").appendChild(newButton((modules[i].getModuleId()), (modules[i].getModuleName()), i));
                 let br = document.createElement('br');
-                document.getElementById(modules[i].getModuleCategory() + "-category").appendChild(br);
+                document.getElementById(modules[i].getModuleCategory() + "-subCategory").appendChild(br);
         }
 
         /*
