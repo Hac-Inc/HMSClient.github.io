@@ -3,7 +3,7 @@ class PaperclipsMultiplier extends module {
                 super(module);
                 this.ModuleName = "Paperclips Multiplier";
                 this.ModuleId = "PaperclipsMultiplier";
-                this.category = "games";
+                this.category = "paperclips";
         }
         execute() {
                 clips *= 2;

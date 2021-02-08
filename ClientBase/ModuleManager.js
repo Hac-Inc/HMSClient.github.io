@@ -5,7 +5,7 @@ class module {
         constructor() {
                 this.ModuleName;
                 this.ModuleId;
-                this.category;
+                this.category;    //for the category you must put the name of a subcategory.
         }
         getModuleName() {
                 return this.ModuleName;

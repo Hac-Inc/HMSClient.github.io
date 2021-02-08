@@ -3,7 +3,7 @@ class TabDisguise extends module {
                 super(module);
                 this.ModuleId = "TabDisguise";
                 this.ModuleName = "Tab Disguiser";
-                this.category = "misc";
+                this.category = "tab";
         }
         execute() {
                 let f = document.getElementsByTagName('link')
