@@ -3,7 +3,7 @@ class MembeanAC extends module {
                 super(module)
                 this.ModuleName = "Membean Auto Correct";
                 this.ModuleId = "MembeanAC";
-                this.category = "quiz";
+                this.category = "membean";
         }
         execute() {
                 document.getElementById('pass').click();
