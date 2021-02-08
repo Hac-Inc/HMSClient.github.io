@@ -7,5 +7,7 @@ class PaperclipsMultiplier extends module {
         }
         execute() {
                 clips *= 2;
+                unsoldClips *=2
+                unusedClips *=2
         }
 }
