@@ -10,6 +10,7 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/MembeanAC.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/TabFreeze.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/TabDisguise.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/PaperclipsMultiplier.js',
 
         //Compilers:
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleInitalizer.js'
@@ -26,6 +27,7 @@ const client_dev_files = [
         'ClientBase/Modules/MembeanAC.js',
         'ClientBase/Modules/TabFreeze.js',
         'ClientBase/Modules/TabDisguise.js',
+        'ClientBase/Modules/PaperclipsMultiplier.js',
 
         //Compilers:
         'ClientBase/ModuleInitalizer.js'
