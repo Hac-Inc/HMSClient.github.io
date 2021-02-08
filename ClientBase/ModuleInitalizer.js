@@ -6,11 +6,13 @@ function initModules() {
                 let MembeanAC_Module = new MembeanAC;
                 let TabFreeze_Module = new TabFreeze;
                 let TabDisguise_Module = new TabDisguise;
+                let test_Module = new test;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
                 modules.push(TabFreeze_Module);
                 modules.push(TabDisguise_Module);
+                modules.push(test_Module);
 
 
         } catch (error) {
