@@ -11,5 +11,7 @@ class moreCreativity extends module {
         processors += 1000;
         creativity += 1000;
         memory += 1000;
+        yomi += 1
+        yomi *= 2
     }
 }
