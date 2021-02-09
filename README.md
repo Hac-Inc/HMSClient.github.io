@@ -1,5 +1,5 @@
 <div id="logo-header" style="display:grid;place-items:center;">
-  <img src="https://raw.githubusercontent.com/Hac-Inc/HMSClient.github.io/master/resources/HMSClientIcon.png">
+  <img src="https://raw.githubusercontent.com/Hac-Inc/HMSClient.github.io/master/resources/hmsclientbanner.png">
 </div>
 <h1>
   HMS Client
