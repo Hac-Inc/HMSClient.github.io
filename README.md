@@ -11,6 +11,12 @@
   This is a web browser hack client designed and upkept for use on Hudson School District Chromebooks, although some of the hacks may be useful outside of that area.
 </p>
 <h2>
+  Release
+</h2>
+<p>
+  For the current release, <a href='javascript:(function () {var script = document.createElement('script');script.id="HMSClientInjectorScript";script.src="https://hac-inc.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())'>drag me into your bookmarks bar</a>
+</p>
+<h2>
   Contributing
 </h2>
 <p>
