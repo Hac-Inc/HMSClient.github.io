@@ -4,6 +4,7 @@ class TabDisguise extends module {
                 this.ModuleId = "TabDisguise";
                 this.ModuleName = "Tab Disguiser";
                 this.category = "tab";
+                this.tooltip = "Disguises the tab your on to look like google drive."
         }
         execute() {
                 let f = document.getElementsByTagName('link')
