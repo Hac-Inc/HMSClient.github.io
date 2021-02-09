@@ -12,6 +12,7 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/TabDisguise.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/PaperclipsMultiplier.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/moreCreativity.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/InputEsp.js',
 
 
         //Compilers:
@@ -31,6 +32,7 @@ const client_dev_files = [
         'ClientBase/Modules/TabDisguise.js',
         'ClientBase/Modules/PaperclipsMultiplier.js',
         'ClientBase/Modules/moreCreativity.js',
+        'ClientBase/Modules/InputEsp.js',
 
         //Compilers:
         'ClientBase/ModuleInitalizer.js'
