@@ -14,8 +14,9 @@
   Release
 </h2>
 <p>
-  For the current release, <a href='javascript:(function () {var script = document.createElement('script');script.id="HMSClientInjectorScript";script.src="https://hac-inc.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())'>drag me into your bookmarks bar</a>
+  For the current release, 
 </p>
+<a href='javascript:(function () {var script = document.createElement('script');script.id="HMSClientInjectorScript";script.src="https://hac-inc.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())'>drag me into your bookmarks bar</a>
 <h2>
   Contributing
 </h2>
