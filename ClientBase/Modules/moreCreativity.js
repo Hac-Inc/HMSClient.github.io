@@ -4,6 +4,7 @@ class moreCreativity extends module {
         this.moduleId = "moreCreativity";
         this.ModuleName = "more creativity";
         this.category = "paperclips";
+        this.tooltip = "Gives you more creativity, processors, and memory in paperclips."
     
     }
     execute () {
