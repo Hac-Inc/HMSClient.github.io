@@ -27,5 +27,11 @@ class InputEsp extends module {
                         t[i].style.borderColor = this.color;
                         t[i].style.borderWidth = "5px";
                 }
+                let a = document.getElementsByTagName("a");
+                for(i=0;i<a.length;i++) {
+                        a[i].style.border = "solid";
+                        a[i].style.borderColor = this.color;
+                        a[i].style.borderWidth = "5px";
+                }
         }
 }
