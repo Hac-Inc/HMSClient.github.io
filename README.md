@@ -15,9 +15,10 @@
 </h2>
 <p>
   For the current release, highlight the text below and drag it into your bookmarks bar:
-  <br>
-  javascript:(function () {var script = document.createElement('script');script.id="HMSClientInjectorScript";script.src="https://hac-inc.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())
 </p>
+<a>
+  javascript:(function () {var script = document.createElement('script');script.id="HMSClientInjectorScript";script.src="https://hac-inc.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())
+</a>
 <h2>
   Contributing
 </h2>
