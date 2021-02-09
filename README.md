@@ -16,3 +16,9 @@
 <p>
   If you would like to contribute, please fork the repository, change or add the things you want, and create a pull request.
 </p>
+<h2>
+  Help
+</h2>
+<p>
+  Join our discord server where we also work on other cool projects: https://discord.gg/rGuEesaWZh
+</p>
