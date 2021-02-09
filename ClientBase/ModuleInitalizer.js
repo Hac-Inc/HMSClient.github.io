@@ -8,6 +8,7 @@ function initModules() {
                 let TabDisguise_Module = new TabDisguise;
                 let PaperclipsMultiplier_Module = new PaperclipsMultiplier;
                 let moreCreativity_module = new moreCreativity;
+                let InputEsp_Module = new InputEsp;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
@@ -15,6 +16,7 @@ function initModules() {
                 modules.push(TabDisguise_Module);
                 modules.push(PaperclipsMultiplier_Module);
                 modules.push(moreCreativity_module);
+                modules.push(InputEsp_Module);
 
 
         } catch (error) {
