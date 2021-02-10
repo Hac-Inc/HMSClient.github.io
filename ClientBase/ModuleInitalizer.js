@@ -10,6 +10,7 @@ function initModules() {
                 let moreCreativity_module = new moreCreativity;
                 let InputEsp_Module = new InputEsp;
                 let FpsCounter_Module = new FpsCounter;
+                let HudArrayWindow_Module = new HudArrayWindow;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
@@ -19,6 +20,7 @@ function initModules() {
                 modules.push(moreCreativity_module);
                 modules.push(InputEsp_Module);
                 modules.push(FpsCounter_Module);
+                modules.push(HudArrayWindow_Module);
 
 
         } catch (error) {
@@ -29,3 +31,4 @@ function initModules() {
 
 setTimeout(initModules(), 1000);
 setTimeout(buildHMSClient(), 1001);
+setTimeout(buildHMSClientScreen(), 1001);
