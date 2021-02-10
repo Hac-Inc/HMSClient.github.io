@@ -2,7 +2,7 @@ class moreCreativity extends module {
     constructor () {
         super(module);
         this.moduleId = "moreCreativity";
-        this.ModuleName = "more creativity";
+        this.ModuleName = "Resource Booster";
         this.category = "paperclips";
         this.tooltip = "Gives you more creativity, processors, and memory in paperclips."
     
