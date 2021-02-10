@@ -9,8 +9,8 @@ class FpsCounter extends module {
                 if(document.getElementById("HMSClient-fps-counter")) {
                         document.getElementById("HMSClient-fps-counter").remove();
                 } else {
-                        document.body.appendChild(newUi("HMSClient-fps-counter", 20, 20, 25, 80, null, null, null))
-                        document.getElementById("HMSClient-fps-counter").appendChild(newTextBlock("HMSClient-fps-counter-label", "FPS: ", "white", null, "rgb(0, 0, 0, 0)"));
+                        document.body.appendChild(newUi("HMSClient-fps-counter", 20, 25, 25, 80, null, "rgb(0, 0, 0, 0)", "rgb(0, 0, 0, 0)"))
+                        document.getElementById("HMSClient-fps-counter").appendChild(newTextBlock("HMSClient-fps-counter-label", "FPS: ", "white", null, null));
                         fpsRefreshLoop();
                 }
                 let fps;
