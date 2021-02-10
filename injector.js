@@ -13,6 +13,7 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/PaperclipsMultiplier.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/moreCreativity.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/InputEsp.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/FpsCounter.js',
 
 
         //Compilers:
@@ -33,6 +34,7 @@ const client_dev_files = [
         'ClientBase/Modules/PaperclipsMultiplier.js',
         'ClientBase/Modules/moreCreativity.js',
         'ClientBase/Modules/InputEsp.js',
+        'ClientBase/Modules/FpsCounter.js',
 
         //Compilers:
         'ClientBase/ModuleInitalizer.js'
