@@ -68,7 +68,7 @@ function buildHMSClient() {
                 divbr.style.backgroundColor = "#303030";
                 divbr.style.height = "10px";
                 document.getElementById(module_sub_categorys[i].parentCategory + "-category").appendChild(divbr);
-                document.getElementById(module_sub_categorys[i].name + "-subCategoryHolder").appendChild(newTextBlock(module_sub_categorys[i].name + "-subCategoryHeader", module_sub_categorys[i].name, "#FFF", null, "#FFF", i));
+                document.getElementById(module_sub_categorys[i].name + "-subCategoryHolder").appendChild(newTextBlock(module_sub_categorys[i].name + "-subCategoryHeader", module_sub_categorys[i].name, "#FFF", null, "#FFF", null, null, null, i));
                 document.getElementById(module_sub_categorys[i].name + "-subCategoryHolder").appendChild(newFancyDiv(module_sub_categorys[i].name + "-subCategory", null, null, null, "#FFF"))  ;
         }
         //insertes all the modules in their designated subcategory:
