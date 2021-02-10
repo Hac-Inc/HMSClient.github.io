@@ -85,9 +85,10 @@ function newUi(id, top_bottom, left_right, x, y, height, width, innerHtml, backg
         ui.style.padding = "5px";
         return ui;
 }
-function newTextBlock(id, innerHTML, textColor, backgroundColor, borderColor, height, width, posType, moduleSubCategoryListId) {
+function newTextBlock(id, innerHTML, textColor, backgroundColor, borderColor, height, width, posType, moduleSubCategoryListId, array_hud) {
         height = height || "unset";
         width = width || "unset";
+        array_hud = array_hud || "array";
         backgroundColor = backgroundColor || "#616161";
         borderColor = borderColor || "#00ff15";
         let div = document.createElement('div');
@@ -107,8 +108,10 @@ function newTextBlock(id, innerHTML, textColor, backgroundColor, borderColor, he
         div.style.borderColor = borderColor;
         setTimeout(
                 function() {
-                        if(moduleSubCategoryListId != undefined && moduleSubCategoryListId != null) {
+                        if(moduleSubCategoryListId != undefined && moduleSubCategoryListId != null && array_hud === "array") {
                                 document.getElementById(id).addEventListener('click', function() {module_sub_categorys[moduleSubCategoryListId].toggleVisibility()})
+                        } else if(moduleSubCategoryListId != undefined && moduleSubCategoryListId != null && array_hud === "hud") {
+                                document.getElementById(id).addEventListener('click', function() {module_sub_categorys[moduleSubCategoryListId].toggleVisibilityS()})
                         }
                 }, 100
         )

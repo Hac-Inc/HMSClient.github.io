@@ -14,6 +14,7 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/moreCreativity.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/InputEsp.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/FpsCounter.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/HudArrayWindowjs',
 
 
         //Compilers:
@@ -35,6 +36,7 @@ const client_dev_files = [
         'ClientBase/Modules/moreCreativity.js',
         'ClientBase/Modules/InputEsp.js',
         'ClientBase/Modules/FpsCounter.js',
+        'ClientBase/Modules/HudArrayWindow.js',
 
         //Compilers:
         'ClientBase/ModuleInitalizer.js'
