@@ -48,15 +48,30 @@ function newButton(id, DisplayName, moduleListId, hoverText, backgroundColor, bo
         )
         return button;
 }
-function newUi(id, x, y, height, width, innerHtml, backgroundColor, borderColor) {
+function newUi(id, top_bottom, left_right, x, y, height, width, innerHtml, backgroundColor, borderColor) {
+        top_bottom = top_bottom || "top";
+        left_right = left_right || "left";
         backgroundColor = backgroundColor || "#525252";
         borderColor = borderColor || "#00ff15";
         let ui = document.createElement('div');
         innerHtml = innerHtml || null;
         ui.id = id;
         ui.style.position = "sticky";
-        ui.style.bottom = y + "px";
-        ui.style.left = x + "px";
+        switch(top_bottom) {
+                case "top":
+                        ui.style.top = y + "px";
+                        break;
+                case "bottom":
+                        ui.style.bottom = y + "px";
+                        break;
+        };
+        switch(left_right) {
+                case "left":
+                        ui.style.left = x + "px";
+                        break;
+                case "right":
+                        ui.style.right = x + "px";
+        }
         ui.innerHTML = innerHtml;
         ui.style.minHeight = "10px";
         ui.style.minWidth = "20px";
@@ -70,7 +85,9 @@ function newUi(id, x, y, height, width, innerHtml, backgroundColor, borderColor)
         ui.style.padding = "5px";
         return ui;
 }
-function newTextBlock(id, innerHTML, textColor, backgroundColor, borderColor, moduleSubCategoryListId) {
+function newTextBlock(id, innerHTML, textColor, backgroundColor, borderColor, height, width, posType, moduleSubCategoryListId) {
+        height = height || "unset";
+        width = width || "unset";
         backgroundColor = backgroundColor || "#616161";
         borderColor = borderColor || "#00ff15";
         let div = document.createElement('div');
@@ -82,6 +99,9 @@ function newTextBlock(id, innerHTML, textColor, backgroundColor, borderColor, mo
         div.style.border = "solid";
         div.style.borderWidth = "1px";
         div.style.padding = "3px";
+        div.style.height = height + "px";
+        div.style.width = width + "px";
+        div.style.position = posType;
         div.style.color = textColor;
         div.style.backgroundColor = backgroundColor;
         div.style.borderColor = borderColor;
