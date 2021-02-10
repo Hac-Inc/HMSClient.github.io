@@ -154,6 +154,7 @@ function notifySuccessfullInjection() {
         //success inject notifier
         document.body.appendChild(newTextBlock("SuccessInjectClient", "HMS Client sucessfully injected! Press the ` key on your keyboard to open the HUD menu.", "lime", null, null, 100, 200, "absolute"));
         document.getElementById("SuccessInjectClient").style.top = "5px";
+        document.getElementById("SuccessInjectClient").style.zIndex = "99999";
         setTimeout(
                 function() {
                         document.getElementById("SuccessInjectClient").remove();
