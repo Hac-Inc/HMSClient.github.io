@@ -21,8 +21,10 @@ function initModules() {
                 modules.push(InputEsp_Module);
                 modules.push(FpsCounter_Module);
                 modules.push(HudArrayWindow_Module);
-
-
+                
+                
+                
+                notifySuccessfullInjection();
         } catch (error) {
                 alert("Injection Failed. Please refresh your page and inject again. This could be due to poor internet connection or you are trying to inject on a page with large files.");
         }
