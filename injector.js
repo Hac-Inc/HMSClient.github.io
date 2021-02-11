@@ -15,6 +15,7 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/InputEsp.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/FpsCounter.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/HudArrayWindow.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/Autoclicker.js',
 
 
         //Compilers:
@@ -37,6 +38,7 @@ const client_dev_files = [
         'ClientBase/Modules/InputEsp.js',
         'ClientBase/Modules/FpsCounter.js',
         'ClientBase/Modules/HudArrayWindow.js',
+        'ClientBase/Modules/Autoclicker.js',
 
         //Compilers:
         'ClientBase/ModuleInitalizer.js'
