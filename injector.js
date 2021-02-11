@@ -16,6 +16,7 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/FpsCounter.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/HudArrayWindow.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/Autoclicker.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DarkMode.js',
 
 
         //Compilers:
@@ -39,6 +40,7 @@ const client_dev_files = [
         'ClientBase/Modules/FpsCounter.js',
         'ClientBase/Modules/HudArrayWindow.js',
         'ClientBase/Modules/Autoclicker.js',
+        'ClientBase/Modules/DarkMode.js',
 
         //Compilers:
         'ClientBase/ModuleInitalizer.js'
