@@ -20,7 +20,8 @@ class module_sub_category {
 }
 
 //create your subcategorys here:
-let hud_Subcategory = new module_sub_category("hud", "hud");
+let hud_Subcategory = new module_sub_category("hud", "visual");
+let page_Subcategory = new module_sub_category("page","visual");
 let misc_Subcategory = new module_sub_category("misc", "misc");
 let tab_Subcategory = new module_sub_category("tab", "misc");
 let membean_Subcategory = new module_sub_category("membean", "quiz");
@@ -28,13 +29,14 @@ let paperclips_Subcategory = new module_sub_category("paperclips", "games");
 
 
 const module_categorys = [
-        "hud",
+        "visual",
         "misc",
         "quiz",
         "games"
 ]
 const module_sub_categorys = [
         hud_Subcategory,
+        page_Subcategory,
         misc_Subcategory,
         tab_Subcategory,
         membean_Subcategory,
@@ -84,7 +86,7 @@ function buildHMSClient() {
         }
         //insertes all the modules in their designated subcategory:
         for(i=0;i<modules.length;i++) {
-                document.getElementById(modules[i].getModuleCategory() + "-subCategory").appendChild(newButton((modules[i].getModuleId()), (modules[i].getModuleName()), i, modules[i].getModuleTooltip(), "#a3a3a3", "#6e6e6e"));
+                document.getElementById(modules[i].getModuleCategory() + "-subCategory").appendChild(newButton((modules[i].getModuleId() + "-module"), (modules[i].getModuleName()), i, modules[i].getModuleTooltip(), "#a3a3a3", "#6e6e6e"));
                 let br = document.createElement('br');
                 document.getElementById(modules[i].getModuleCategory() + "-subCategory").appendChild(br);
         }
@@ -136,7 +138,7 @@ function buildHMSClientScreen() {
         }
         //insertes all the modules in their designated subcategory:
         for(i=0;i<modules.length;i++) {
-                document.getElementById(modules[i].getModuleCategory() + "-subCategoryS").appendChild(newButton((modules[i].getModuleId() + "S"), (modules[i].getModuleName()), i, modules[i].getModuleTooltip(), "#a3a3a3", "#6e6e6e"));
+                document.getElementById(modules[i].getModuleCategory() + "-subCategoryS").appendChild(newButton((modules[i].getModuleId() + "-moduleS"), (modules[i].getModuleName()), i, modules[i].getModuleTooltip(), "#a3a3a3", "#6e6e6e"));
                 let br = document.createElement('br');
                 document.getElementById(modules[i].getModuleCategory() + "-subCategoryS").appendChild(br);
         }

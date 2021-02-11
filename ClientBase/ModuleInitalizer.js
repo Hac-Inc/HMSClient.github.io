@@ -9,8 +9,9 @@ function initModules() {
                 let PaperclipsMultiplier_Module = new PaperclipsMultiplier;
                 let moreCreativity_module = new moreCreativity;
                 let InputEsp_Module = new InputEsp;
-                let FpsCounter_Module = new FpsCounter;
                 let HudArrayWindow_Module = new HudArrayWindow;
+                let FpsCounter_Module = new FpsCounter;
+                let Autoclicker_Module = new Autoclicker;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
@@ -19,8 +20,9 @@ function initModules() {
                 modules.push(PaperclipsMultiplier_Module);
                 modules.push(moreCreativity_module);
                 modules.push(InputEsp_Module);
-                modules.push(FpsCounter_Module);
                 modules.push(HudArrayWindow_Module);
+                modules.push(FpsCounter_Module);
+                modules.push(Autoclicker_Module);
                 
                 
                 
