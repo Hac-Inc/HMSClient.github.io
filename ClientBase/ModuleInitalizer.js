@@ -12,6 +12,7 @@ function initModules() {
                 let HudArrayWindow_Module = new HudArrayWindow;
                 let FpsCounter_Module = new FpsCounter;
                 let Autoclicker_Module = new Autoclicker;
+                let DarkMode_Module = new DarkMode;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
@@ -23,6 +24,7 @@ function initModules() {
                 modules.push(HudArrayWindow_Module);
                 modules.push(FpsCounter_Module);
                 modules.push(Autoclicker_Module);
+                modules.push(DarkMode_Module);
                 
                 
                 
