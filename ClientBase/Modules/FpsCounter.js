@@ -3,7 +3,7 @@ class FpsCounter extends module {
                 super(module);
                 this.ModuleName = "FPS Counter";
                 this.ModuleId = "FpsCounter";
-                this.category = "misc";
+                this.category = "hud";
         }
         execute() {
                 if(document.getElementById("HMSClient-fps-counter")) {

@@ -3,7 +3,7 @@ class InputEsp extends module {
                 super(module);
                 this.ModuleName = "Input ESP";
                 this.ModuleId = "InputEsp";
-                this.category = "misc";
+                this.category = "page";
                 this.tooltip = "Highlights all inputs on the page with the chosen color."
                 this.color;
         }
