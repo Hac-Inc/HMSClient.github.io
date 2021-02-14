@@ -17,6 +17,7 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/HudArrayWindow.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/Autoclicker.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DarkMode.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/JsExecuter.js',
 
 
         //Compilers:
@@ -41,6 +42,7 @@ const client_dev_files = [
         'ClientBase/Modules/HudArrayWindow.js',
         'ClientBase/Modules/Autoclicker.js',
         'ClientBase/Modules/DarkMode.js',
+        'ClientBase/Modules/JsExecuter.js',
 
         //Compilers:
         'ClientBase/ModuleInitalizer.js'
