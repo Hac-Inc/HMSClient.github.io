@@ -13,6 +13,7 @@ function initModules() {
                 let FpsCounter_Module = new FpsCounter;
                 let Autoclicker_Module = new Autoclicker;
                 let DarkMode_Module = new DarkMode;
+                let JsExecuter_Module = new JsExecuter;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
@@ -25,6 +26,7 @@ function initModules() {
                 modules.push(FpsCounter_Module);
                 modules.push(Autoclicker_Module);
                 modules.push(DarkMode_Module);
+                modules.push(JsExecuter_Module);
                 
                 
                 
