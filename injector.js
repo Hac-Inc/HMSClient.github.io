@@ -95,5 +95,5 @@ function injectDev() {
         }
 }
 
-//inject();
-injectDev();
+inject();
+//injectDev();
