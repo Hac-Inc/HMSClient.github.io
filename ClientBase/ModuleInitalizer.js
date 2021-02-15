@@ -14,6 +14,7 @@ function initModules() {
                 let Autoclicker_Module = new Autoclicker;
                 let DarkMode_Module = new DarkMode;
                 let JsExecuter_Module = new JsExecuter;
+                let SpaceplanWattMultiplier_Module = new SpaceplanWattMultiplier;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
@@ -27,6 +28,7 @@ function initModules() {
                 modules.push(Autoclicker_Module);
                 modules.push(DarkMode_Module);
                 modules.push(JsExecuter_Module);
+                modules.push(SpaceplanWattMultiplier_Module);
                 
                 
                 
