@@ -18,6 +18,7 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/Autoclicker.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DarkMode.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/JsExecuter.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/SpaceplanWattMultiplier.js',
 
 
         //Compilers:
@@ -43,6 +44,7 @@ const client_dev_files = [
         'ClientBase/Modules/Autoclicker.js',
         'ClientBase/Modules/DarkMode.js',
         'ClientBase/Modules/JsExecuter.js',
+        'ClientBase/Modules/SpaceplanWattMultiplier.js',
 
         //Compilers:
         'ClientBase/ModuleInitalizer.js'
@@ -93,5 +95,5 @@ function injectDev() {
         }
 }
 
-inject();
-//injectDev();
+//inject();
+injectDev();
