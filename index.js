@@ -26,6 +26,7 @@ let misc_Subcategory = new module_sub_category("misc", "misc");
 let tab_Subcategory = new module_sub_category("tab", "misc");
 let membean_Subcategory = new module_sub_category("membean", "quiz");
 let paperclips_Subcategory = new module_sub_category("paperclips", "games");
+let spaceplan_Subcategory = new module_sub_category("spaceplan", "games");
 
 
 const module_categorys = [
@@ -40,7 +41,8 @@ const module_sub_categorys = [
         misc_Subcategory,
         tab_Subcategory,
         membean_Subcategory,
-        paperclips_Subcategory
+        paperclips_Subcategory,
+        spaceplan_Subcategory
 ]
 
 
