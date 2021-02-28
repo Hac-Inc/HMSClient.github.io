@@ -1,3 +1,10 @@
+//color defaults
+var D_ui_background_C = "#525252";
+var D_ui_border_C = "#00ff15";
+var D_button_background_C = "#616161";
+var D_button_border_C = "#00ff15";
+
+
 function newDiv(id, innerHTML, hoverText) {
         let div = document.createElement('div');
         hoverText = hoverText || "";
@@ -5,21 +12,21 @@ function newDiv(id, innerHTML, hoverText) {
         div.title = hoverText;
         div.innerHTML = innerHTML || null;
         div.style.padding = "5px;";
-        div.style.background = "#525252";
+        div.style.background = D_ui_background_C;
         div.style.border = "solid";
         div.style.borderWidth = "1px";
         return div;
 }
 function newFancyDiv(id, innerHTML, hoverText, backgroundColor, borderColor) {
-        backgroundColor = backgroundColor || "#525252";
-        borderColor = borderColor || "#00ff15";
+        backgroundColor = backgroundColor || D_ui_background_C;
+        borderColor = borderColor || D_ui_border_C;
         let div = document.createElement('div');
         hoverText = hoverText || "";
         div.id = id;
         div.title = hoverText;
         div.innerHTML = innerHTML || null;
         div.style.padding = "5px;";
-        div.style.background = "#525252";
+        div.style.background = D_ui_background_C;
         div.style.border = "solid";
         div.style.borderWidth = "1px";
         div.style.borderColor = borderColor;
@@ -29,7 +36,7 @@ function newFancyDiv(id, innerHTML, hoverText, backgroundColor, borderColor) {
 }
 function newButton(id, DisplayName, moduleListId, hoverText, backgroundColor, borderColor) {
         backgroundColor = backgroundColor || "#616161";
-        borderColor = borderColor || "#00ff15";
+        borderColor = borderColor || D_button_border_C;
         let button = document.createElement('input');
         hoverText = hoverText || DisplayName;
         button.type = "button";
@@ -51,8 +58,8 @@ function newButton(id, DisplayName, moduleListId, hoverText, backgroundColor, bo
 function newUi(id, top_bottom, left_right, x, y, height, width, innerHtml, backgroundColor, borderColor) {
         top_bottom = top_bottom || "top";
         left_right = left_right || "left";
-        backgroundColor = backgroundColor || "#525252";
-        borderColor = borderColor || "#00ff15";
+        backgroundColor = backgroundColor || D_ui_background_C;
+        borderColor = borderColor || D_ui_border_C;
         let ui = document.createElement('div');
         innerHtml = innerHtml || null;
         ui.id = id;
@@ -89,14 +96,14 @@ function newTextBlock(id, innerHTML, textColor, backgroundColor, borderColor, he
         height = height || "unset";
         width = width || "unset";
         array_hud = array_hud || "array";
-        backgroundColor = backgroundColor || "#616161";
-        borderColor = borderColor || "#00ff15";
+        backgroundColor = backgroundColor || D_button_background_C;
+        borderColor = borderColor || D_ui_border_C;
         let div = document.createElement('div');
         div.style.fontFamily = "Arial, Helvetica, sans-serif";
         div.id = id;
         div.innerHTML = innerHTML || null;
         div.style.padding = "5px;";
-        div.style.background = "#525252";
+        div.style.background = D_ui_background_C;
         div.style.border = "solid";
         div.style.borderWidth = "1px";
         div.style.padding = "3px";
