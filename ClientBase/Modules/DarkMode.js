@@ -18,6 +18,7 @@ class DarkMode extends module {
                 }
                 for(i=0;i<p.length;i++) {
                         p[i].style.color = "white";
+                        p[i].style.backgroundColor = "#454545";
                 }
         }
 }
