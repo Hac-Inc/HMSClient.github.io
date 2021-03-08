@@ -19,10 +19,10 @@
 <a>
   https://sites.google.com/view/hac-inc/home
 </a>
+<br>
 <p>
   or this link if the one above dosent work:
 </p>
-<br>
 <a>
   https://grajkogj.github.io/HMSClient.github.io/resources/install.html
 </a>
