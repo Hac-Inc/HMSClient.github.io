@@ -19,12 +19,14 @@
 <a>
   https://sites.google.com/view/hac-inc/home
 </a>
+<br>
 <p>
-  or highlight the text below and drag it into your bookmarks bar:
+  or this link if the one above dosent work:
 </p>
 <a>
-  javascript:(function () {var script = document.createElement("script");script.id="HMSClientInjectorScript";script.src="https://hac-inc.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())
+  https://grajkogj.github.io/HMSClient.github.io/resources/install.html
 </a>
+<br>
 <h2>
   Contributing
 </h2>
