@@ -15,6 +15,7 @@ function initModules() {
                 let DarkMode_Module = new DarkMode;
                 let JsExecuter_Module = new JsExecuter;
                 let SpaceplanWattMultiplier_Module = new SpaceplanWattMultiplier;
+                let FontChanger_Module = new ChangeFont;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
@@ -29,6 +30,7 @@ function initModules() {
                 modules.push(DarkMode_Module);
                 modules.push(JsExecuter_Module);
                 modules.push(SpaceplanWattMultiplier_Module);
+                modules.push(FontChanger_Module);
                 
                 
                 
