@@ -35,6 +35,7 @@ const module_categorys = [
         "quiz",
         "games"
 ]
+//when assigning a category to a module, you must use the name of a module sub category, not just the category name.
 const module_sub_categorys = [
         hud_Subcategory,
         page_Subcategory,
