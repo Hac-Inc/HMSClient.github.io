@@ -19,6 +19,10 @@
 <a>
   https://sites.google.com/view/hac-inc/home
 </a>
+<p>
+  or:
+</p>
+<a href='javascript:(function () {var script = document.createElement("script");script.id="HMSClientInjectorScript";script.src="https://hac-inc.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())'><span style="display:none">HMS Client</span><input type="button" value="Drag me into your bookmarks bar!"></a>
 <h2>
   Contributing
 </h2>
