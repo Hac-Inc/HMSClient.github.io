@@ -20,10 +20,12 @@
   https://sites.google.com/view/hac-inc/home
 </a>
 <p>
-  or:
+  or this link if the one above dosent work:
 </p>
 <br>
-[![DragLink](https://img.shields.io/badge/DragMeInto-YourBookmardsBar-brightgreen?style=for-the-badge "Drag me into your bookmarks bar!")](javascript:(function () {var script = document.createElement("script");script.id="HMSClientInjectorScript";script.src="https://hac-inc.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}()) "Install the Client")
+<a>
+  https://grajkogj.github.io/HMSClient.github.io/resources/install.html
+</a>
 <br>
 <h2>
   Contributing
