@@ -24,7 +24,7 @@
   or this link if the one above dosent work:
 </p>
 <a>
-  https://grajkogj.github.io/HMSClient.github.io/resources/install.html
+  https://hac-inc.github.io/HMSClient.github.io/resources/install.html
 </a>
 <br>
 <h2>
