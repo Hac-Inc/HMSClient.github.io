@@ -3,10 +3,11 @@ class ChangeFont extends module {
                 super(module);
                 this.ModuleName = "FontChanger";
                 this.ModuleId = "FontChanger";
-                this.category = "misc";
+                this.category = "page";
                 this.tooltip = "Type The font You Want And Watch It Change On Screen"
         }
-execute() {
-        var f_name = prompt("Enter the name of font! (no caps) \n For list of fonts visit http://goo.gl/I06Lz");
-        document.body.style.fontFamily = f_name; 
+        execute() {
+                var f_name = prompt("Enter the name of font! (no caps) \n For list of fonts visit http://goo.gl/I06Lz");
+                document.body.style.fontFamily = f_name; 
+        }
 }
