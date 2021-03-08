@@ -20,9 +20,11 @@
   https://sites.google.com/view/hac-inc/home
 </a>
 <p>
-  or:
+  or highlight the text below and drag it into your bookmarks bar:
 </p>
-<a href='javascript:(function () {var script = document.createElement("script");script.id="HMSClientInjectorScript";script.src="https://hac-inc.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())'><span style="display:none">HMS Client</span><input type="button" value="Drag me into your bookmarks bar!"></a>
+<a>
+  javascript:(function () {var script = document.createElement("script");script.id="HMSClientInjectorScript";script.src="https://hac-inc.github.io/HMSClient.github.io/injector.js";document.head.appendChild(script);}())
+</a>
 <h2>
   Contributing
 </h2>
