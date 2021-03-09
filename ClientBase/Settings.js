@@ -19,7 +19,7 @@ function registerBoolSetting(tiedModuleId, displayName, varName, defaultValue) {
                 }
                 document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(setting);
                 document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(label);
-        },1010);
+        },1100);
 };
 
 function boolSetting(setting) {
@@ -54,7 +54,7 @@ function registerIntSetting(tiedModuleId, displayName, varName, defaultValue, mi
                 document.getElementById(varName + "-intSetting").addEventListener('change', function() {
                         document.getElementById(varName + "-intSetting-label").innerHTML = displayName + ": " + document.getElementById(varName + "-intSetting").value;
                 })
-        },1010);
+        },1100);
 }
 
 function intSetting(setting) {
