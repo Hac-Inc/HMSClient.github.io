@@ -48,30 +48,9 @@ function newButton(id, DisplayName, moduleListId, hoverText, backgroundColor, bo
         button.style.border = "solid";
         button.style.borderWidth = "2px";
         button.style.borderColor = borderColor;
-        button.style.outline = "none";
         setTimeout(
                 function() {
-                        document.getElementById(id).addEventListener('click', function() {modules[moduleListId].toggle()})
                         document.getElementById(id).addEventListener('click', function() {modules[moduleListId].execute()})
-                        document.getElementById(id).addEventListener('contextmenu', function(e) {
-                                e.preventDefault();
-                                if(modules[moduleListId].hasSettings == true) {
-                                        if(document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-setting-container").style.display == "none") {
-                                                document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-setting-container").style.display = "";
-                                                document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-container").style.borderLeft = "solid";
-                                                document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-container").style.borderWidth = "5px";
-                                                document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-container").style.borderColor = "#00ff15";
-                                        } else {
-                                                document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-setting-container").style.display = "none";
-                                                document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-container").style.borderWidth = "2px";
-                                        }
-                                }
-                        })
-                        setInterval(function() {
-                                if(modules[moduleListId].active == true) {
-                                        modules[moduleListId].whileActive();
-                                };
-                        },100);
                 }, 100
         )
         return button;
