@@ -5,7 +5,7 @@ class TestModule extends module {
                 this.ModuleId = "TestModule";
                 this.category = "misc";
                 this.tooltip = "Module for testing new features";
-
+                this.hasSettings = true;
                 this.toggleable = true;
 
                 registerBoolSetting(this.ModuleId, "Test Bool", "testBool", true);
