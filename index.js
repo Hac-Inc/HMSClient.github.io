@@ -235,30 +235,6 @@ function dragElement(elmnt) {
 
 
 
-//MODULE SETTING DRAW UTILS:
-
-function drawModuleBoolSetting(tiedModuleId, obj, objLabel) {
-        if(document.getElementById(tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
-                let br = document.createElement("br");
-                document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(br);
-        }
-        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(obj);
-        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(objLabel);
-}
-
-
-function drawModuleIntSetting(tiedModuleId, obj, objLabel, displayName, varName) {
-        if(document.getElementById(tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
-                let br = document.createElement("br");
-                document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(br);
-        }
-        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(obj);
-        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(objLabel);
-        document.getElementById(varName + "-intSetting").addEventListener('change', function() {
-                document.getElementById(varName + "-intSetting-label").innerHTML = displayName + ": " + document.getElementById(varName + "-intSetting").value;
-        })
-}
-
 
 
 
