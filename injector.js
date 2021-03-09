@@ -5,7 +5,9 @@ const client_files = [
         //'https://hac-inc.github.io/HMSClient.github.io/injector.js',
         'https://hac-inc.github.io/HMSClient.github.io/index.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/BuildTools.js',
-        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleManager.js',
+
+
+
         //Modules:
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/MembeanAC.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/TabFreeze.js',
@@ -19,20 +21,19 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DarkMode.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/JsExecuter.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/SpaceplanWattMultiplier.js',
-        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/ChangeFont.js',
-
-
-        //Compilers:
-        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleInitalizer.js'
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/ChangeFont.js'
 
 ]
+
 
 const client_dev_files = [
         //Runtime Files:
         //'injector.js',
         'index.js',
         'ClientBase/BuildTools.js',
-        'ClientBase/ModuleManager.js',
+
+
+
         //Modules:
         'ClientBase/Modules/MembeanAC.js',
         'ClientBase/Modules/TabFreeze.js',
@@ -47,53 +48,99 @@ const client_dev_files = [
         'ClientBase/Modules/JsExecuter.js',
         'ClientBase/Modules/SpaceplanWattMultiplier.js',
         'ClientBase/Modules/ChangeFont.js',
+        'ClientBase/Modules/TestModule.js'
 
-        //Compilers:
-        'ClientBase/ModuleInitalizer.js'
 ]
+
 
 function inject() {
         if(document.getElementById("HMSClientScriptBundle")) {
                 document.getElementById("HMSClientScriptBundle").remove();
+                
                 s = document.createElement('section');
                 s.id = "HMSClientScriptBundle";
                 document.head.appendChild(s);
+
+                m = document.createElement('script');
+                m.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleManager.js";
+                document.getElementById("HMSClientScriptBundle").appendChild(m);
+
                 for(i=0;i<client_files.length;i++) {
                         x = document.createElement('script');
                         x.src = client_files[i];
+                        x.defer = true;
                         document.getElementById("HMSClientScriptBundle").appendChild(x);
                 }
+
+                c = document.createElement('script');
+                c.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleInitalizer.js";
+                c.defer = true;
+                document.getElementById("HMSClientScriptBundle").appendChild(c);
         } else {
                 s = document.createElement('section');
                 s.id = "HMSClientScriptBundle";
                 document.head.appendChild(s);
+
+                m = document.createElement('script');
+                m.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleManager.js";
+                document.getElementById("HMSClientScriptBundle").appendChild(m);
+
                 for(i=0;i<client_files.length;i++) {
                         x = document.createElement('script');
                         x.src = client_files[i];
+                        x.defer = true;
                         document.getElementById("HMSClientScriptBundle").appendChild(x);
                 }
+
+                c = document.createElement('script');
+                c.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleInitalizer.js";
+                c.defer = true;
+                document.getElementById("HMSClientScriptBundle").appendChild(c);
         }
 }
 function injectDev() {
         if(document.getElementById("HMSClientScriptBundle")) {
                 document.getElementById("HMSClientScriptBundle").remove();
+
                 s = document.createElement('section');
                 s.id = "HMSClientScriptBundle";
                 document.head.appendChild(s);
+
+                m = document.createElement('script');
+                m.src = "ClientBase/ModuleManager.js";
+                document.getElementById("HMSClientScriptBundle").appendChild(m);
+
                 for(i=0;i<client_dev_files.length;i++) {
                         x = document.createElement('script');
                         x.src = client_dev_files[i];
+                        x.defer = true;
                         document.getElementById("HMSClientScriptBundle").appendChild(x);
                 }
+
+                c = document.createElement('script');
+                c.src = "ClientBase/ModuleInitalizer.js";
+                c.defer = true;
+                document.getElementById("HMSClientScriptBundle").appendChild(c);
         } else {
                 s = document.createElement('section');
                 s.id = "HMSClientScriptBundle";
                 document.head.appendChild(s);
+
+                m = document.createElement('script');
+                m.src = "ClientBase/ModuleManager.js";
+                document.getElementById("HMSClientScriptBundle").appendChild(m);
+
                 for(i=0;i<client_dev_files.length;i++) {
                         x = document.createElement('script');
                         x.src = client_dev_files[i];
+                        x.defer = true;
                         document.getElementById("HMSClientScriptBundle").appendChild(x);
                 }
+
+                c = document.createElement('script');
+                c.src = "ClientBase/ModuleInitalizer.js";
+                c.defer = true;
+                document.getElementById("HMSClientScriptBundle").appendChild(c);
         }
 }
 

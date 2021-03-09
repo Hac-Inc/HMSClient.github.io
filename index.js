@@ -141,9 +141,19 @@ function buildHMSClientScreen() {
         }
         //insertes all the modules in their designated subcategory:
         for(i=0;i<modules.length;i++) {
-                document.getElementById(modules[i].getModuleCategory() + "-subCategoryS").appendChild(newButton((modules[i].getModuleId() + "-moduleS"), (modules[i].getModuleName()), i, modules[i].getModuleTooltip(), "#a3a3a3", "#6e6e6e"));
-                let br = document.createElement('br');
-                document.getElementById(modules[i].getModuleCategory() + "-subCategoryS").appendChild(br);
+                let d = document.createElement('div');
+                d.id = modules[i].getModuleId() + "-moduleS-container";
+                if(modules[i].hasSettings == true) {
+                        d.style.borderLeft = "solid";
+                        d.style.borderColor = "#00ff15";
+                        d.style.borderWidth = "2px";
+                }
+                let s = document.createElement('div');
+                s.id = modules[i].getModuleId() + "-moduleS-setting-container";
+                s.style.display = "none";
+                document.getElementById(modules[i].getModuleCategory() + "-subCategoryS").appendChild(d);
+                document.getElementById(modules[i].getModuleId() + "-moduleS-container").appendChild(newButton((modules[i].getModuleId() + "-moduleS"), (modules[i].getModuleName()), i, modules[i].getModuleTooltip(), "#a3a3a3", "#6e6e6e"));
+                document.getElementById(modules[i].getModuleId() + "-moduleS-container").appendChild(s);
         }
 
         document.body.addEventListener('keypress', e => {

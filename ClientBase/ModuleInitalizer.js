@@ -16,6 +16,7 @@ function initModules() {
                 let JsExecuter_Module = new JsExecuter;
                 let SpaceplanWattMultiplier_Module = new SpaceplanWattMultiplier;
                 let FontChanger_Module = new ChangeFont;
+                let TestModule_Module = new TestModule;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
@@ -31,6 +32,7 @@ function initModules() {
                 modules.push(JsExecuter_Module);
                 modules.push(SpaceplanWattMultiplier_Module);
                 modules.push(FontChanger_Module);
+                modules.push(TestModule_Module);
                 
                 
                 

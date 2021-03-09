@@ -4,15 +4,13 @@ class FpsCounter extends module {
                 this.ModuleName = "FPS Counter";
                 this.ModuleId = "FpsCounter";
                 this.category = "hud";
+                this.toggleable = true;
         }
-        execute() {
-                if(document.getElementById("HMSClient-fps-counter")) {
-                        document.getElementById("HMSClient-fps-counter").remove();
-                } else {
-                        document.body.appendChild(newUi("HMSClient-fps-counter", "bottom", "left", 20, 30, 25, 100, null, "rgb(0, 0, 0, 0)", "rgb(0, 0, 0, 0)"))
-                        document.getElementById("HMSClient-fps-counter").appendChild(newTextBlock("HMSClient-fps-counter-label", "FPS: ", "white", null, null, 30, 80, "absolute"));
-                        fpsRefreshLoop();
-                }
+        
+        onActivate() {
+                document.body.appendChild(newUi("HMSClient-fps-counter", "bottom", "left", 20, 30, 25, 100, null, "rgb(0, 0, 0, 0)", "rgb(0, 0, 0, 0)"));
+                document.getElementById("HMSClient-fps-counter").appendChild(newTextBlock("HMSClient-fps-counter-label", "FPS: ", "white", null, null, 30, 80, "absolute"));
+                fpsRefreshLoop();
                 let fps;
                 const times = []
                 function fpsRefreshLoop() {
@@ -39,5 +37,8 @@ class FpsCounter extends module {
                                 }
                         }, 1000
                 )
+        }
+        onDeactivate() {
+                document.getElementById("HMSClient-fps-counter").remove();
         }
 }
