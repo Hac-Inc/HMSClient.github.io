@@ -21,7 +21,8 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DarkMode.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/JsExecuter.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/SpaceplanWattMultiplier.js',
-        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/ChangeFont.js'
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/ChangeFont.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/TestModule.js'
 
 ]
 
@@ -49,6 +50,33 @@ const client_dev_files = [
         'ClientBase/Modules/SpaceplanWattMultiplier.js',
         'ClientBase/Modules/ChangeFont.js',
         'ClientBase/Modules/TestModule.js'
+
+]
+
+
+const client_debug_files = [
+        //Runtime Files:
+        //'https://hac-inc.github.io/HMSClient.github.io/injector.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/index.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/BuildTools.js',
+
+
+
+        //Modules:
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/MembeanAC.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/TabFreeze.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/TabDisguise.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/PaperclipsMultiplier.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/moreCreativity.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/InputEsp.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/FpsCounter.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/HudArrayWindow.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/Autoclicker.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/DarkMode.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/JsExecuter.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/SpaceplanWattMultiplier.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/ChangeFont.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/TestModule.js'
 
 ]
 
@@ -164,5 +192,64 @@ function injectDev() {
         }
 }
 
+
+function injectDebug() {
+        if(document.getElementById("HMSClientScriptBundle")) {
+                document.getElementById("HMSClientScriptBundle").remove();
+                
+                s = document.createElement('section');
+                s.id = "HMSClientScriptBundle";
+                document.head.appendChild(s);
+
+                m = document.createElement('script');
+                m.src = "https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/ModuleManager.js";
+                document.getElementById("HMSClientScriptBundle").appendChild(m);
+
+                for(i=0;i<client_debug_files.length;i++) {
+                        x = document.createElement('script');
+                        x.src = client_debug_files[i];
+                        x.defer = true;
+                        document.getElementById("HMSClientScriptBundle").appendChild(x);
+                }
+/*
+                t = document.createElement('script');
+                t.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/Settings.js";
+                t.defer = true;
+                document.getElementById("HMSClientScriptBundle").appendChild(t);
+*/
+                c = document.createElement('script');
+                c.src = "https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/ModuleInitalizer.js";
+                c.defer = true;
+                document.getElementById("HMSClientScriptBundle").appendChild(c);
+        } else {
+                s = document.createElement('section');
+                s.id = "HMSClientScriptBundle";
+                document.head.appendChild(s);
+
+                m = document.createElement('script');
+                m.src = "https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/ModuleManager.js";
+                document.getElementById("HMSClientScriptBundle").appendChild(m);
+
+                for(i=0;i<client_debug_files.length;i++) {
+                        x = document.createElement('script');
+                        x.src = client_debug_files[i];
+                        x.defer = true;
+                        document.getElementById("HMSClientScriptBundle").appendChild(x);
+                }
+/*
+                t = document.createElement('script');
+                t.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/Settings.js";
+                t.defer = true;
+                document.getElementById("HMSClientScriptBundle").appendChild(t);
+*/
+                c = document.createElement('script');
+                c.src = "https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/ModuleInitalizer.js";
+                c.defer = true;
+                document.getElementById("HMSClientScriptBundle").appendChild(c);
+        }
+}
+
 inject();
 //injectDev();
+
+//injectDebug();
