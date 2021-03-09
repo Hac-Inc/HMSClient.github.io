@@ -5,12 +5,12 @@ class HudArrayWindow extends module {
                 this.ModuleId = "HudArrayWindow";
                 this.category = "hud";
                 this.tooltip = "Toggles the dragable module window.";
+                this.toggleable = true;
         }
-        execute() {
-                if(document.getElementById("HMSClientWindow").style.display == "none") {
-                        document.getElementById("HMSClientWindow").style.display = "";
-                } else {
-                        document.getElementById("HMSClientWindow").style.display = "none";
-                }
+        onActivate() {
+                document.getElementById("HMSClientWindow").style.display = "";
+        }
+        onDeactivate() {
+                document.getElementById("HMSClientWindow").style.display = "none";
         }
 }

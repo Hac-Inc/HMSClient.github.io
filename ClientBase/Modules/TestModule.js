@@ -8,8 +8,8 @@ class TestModule extends module {
                 this.hasSettings = true;
                 this.toggleable = true;
 
-                registerBoolSetting(this.ModuleId, "Test Bool", "testBool", true);
-                registerIntSetting(this.ModuleId, "Test Int", "testInt", 0, -10, 10);
+                registerBoolSetting(this.ModuleId, "Test Bool", "testBool_test", true);
+                registerIntSetting(this.ModuleId, "Test Int", "testInt_test", 0, -10, 10);
         }
         execute() {
                 console.log("this is a toggleable module");
