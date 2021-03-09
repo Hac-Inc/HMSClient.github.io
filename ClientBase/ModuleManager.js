@@ -24,7 +24,7 @@ class module {
                         }
                         document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(setting);
                         document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(label);
-                },1010);
+                },2010);
         };
         
         boolSetting(setting) {
@@ -59,7 +59,7 @@ class module {
                         document.getElementById(varName + "-intSetting").addEventListener('change', function() {
                                 document.getElementById(varName + "-intSetting-label").innerHTML = displayName + ": " + document.getElementById(varName + "-intSetting").value;
                         })
-                },1010);
+                },2010);
         }
         
         intSetting(setting) {
