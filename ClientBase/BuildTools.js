@@ -145,4 +145,3 @@ function newTextBlock(id, innerHTML, textColor, backgroundColor, borderColor, he
         )
         return div;
 }
-
