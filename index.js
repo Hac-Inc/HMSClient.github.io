@@ -143,6 +143,11 @@ function buildHMSClientScreen() {
         for(i=0;i<modules.length;i++) {
                 let d = document.createElement('div');
                 d.id = modules[i].getModuleId() + "-moduleS-container";
+                if(modules[i].hasSettings == true) {
+                        d.style.borderLeft = "solid";
+                        d.style.borderColor = "#00ff15";
+                        d.style.borderWidth = "2px";
+                }
                 let s = document.createElement('div');
                 s.id = modules[i].getModuleId() + "-moduleS-setting-container";
                 s.style.display = "none";
