@@ -3,7 +3,7 @@ class ChangeFont extends module {
                 super(module);
                 this.ModuleName = "FontChanger";
                 this.ModuleId = "FontChanger";
-                this.category = "page";
+                this.category = "misc";
                 this.tooltip = "Type The font You Want And Watch It Change On Screen"
         }
         execute() {
