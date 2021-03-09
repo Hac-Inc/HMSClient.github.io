@@ -71,7 +71,12 @@ function inject() {
                         x.defer = true;
                         document.getElementById("HMSClientScriptBundle").appendChild(x);
                 }
-
+/*
+                t = document.createElement('script');
+                t.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/Settings.js";
+                t.defer = true;
+                document.getElementById("HMSClientScriptBundle").appendChild(t);
+*/
                 c = document.createElement('script');
                 c.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleInitalizer.js";
                 c.defer = true;
@@ -91,7 +96,12 @@ function inject() {
                         x.defer = true;
                         document.getElementById("HMSClientScriptBundle").appendChild(x);
                 }
-
+/*
+                t = document.createElement('script');
+                t.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/Settings.js";
+                t.defer = true;
+                document.getElementById("HMSClientScriptBundle").appendChild(t);
+*/
                 c = document.createElement('script');
                 c.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleInitalizer.js";
                 c.defer = true;
@@ -116,7 +126,12 @@ function injectDev() {
                         x.defer = true;
                         document.getElementById("HMSClientScriptBundle").appendChild(x);
                 }
-
+/*
+                t = document.createElement('script');
+                t.src = "ClientBase/Settings.js";
+                t.defer = true;
+                document.getElementById("HMSClientScriptBundle").appendChild(t);
+*/
                 c = document.createElement('script');
                 c.src = "ClientBase/ModuleInitalizer.js";
                 c.defer = true;
@@ -136,7 +151,12 @@ function injectDev() {
                         x.defer = true;
                         document.getElementById("HMSClientScriptBundle").appendChild(x);
                 }
-
+/*
+                t = document.createElement('script');
+                t.src = "ClientBase/Settings.js";
+                t.defer = true;
+                document.getElementById("HMSClientScriptBundle").appendChild(t);
+*/
                 c = document.createElement('script');
                 c.src = "ClientBase/ModuleInitalizer.js";
                 c.defer = true;
