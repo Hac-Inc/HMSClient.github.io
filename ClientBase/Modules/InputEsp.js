@@ -8,11 +8,11 @@ class InputEsp extends module {
                 this.toggleable = true;
                 this.hasSettings = true;
 
-                registerBoolSetting(this.ModuleId, "Inputs", "esp_inputs", true);
-                registerBoolSetting(this.ModuleId, "Buttons", "esp_buttons", true);
-                registerBoolSetting(this.ModuleId, "Textareas", "esp_textarea", true);
-                registerBoolSetting(this.ModuleId, "Links", "esp_links", true);
-                registerBoolSetting(this.ModuleId, "Selects", "esp_selects", true);
+                this.registerBoolSetting(this.ModuleId, "Inputs", "esp_inputs", true);
+                this.registerBoolSetting(this.ModuleId, "Buttons", "esp_buttons", true);
+                this.registerBoolSetting(this.ModuleId, "Textareas", "esp_textarea", true);
+                this.registerBoolSetting(this.ModuleId, "Links", "esp_links", true);
+                this.registerBoolSetting(this.ModuleId, "Selects", "esp_selects", true);
 
                 this.color;
         }
@@ -23,7 +23,7 @@ class InputEsp extends module {
         
         onActivate() {
                 this.color = prompt("Please type the color for the ESP: ");
-                if(boolSetting("esp_inputs")) {
+                if(this.boolSetting("esp_inputs")) {
                         let x = document.getElementsByTagName("input");
                         for(i=0;i<x.length;i++) {
                                 x[i].style.border = "solid";
@@ -32,7 +32,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(boolSetting("esp_buttons")) {
+                if(this.boolSetting("esp_buttons")) {
                         let b = document.getElementsByTagName("button");
                         for(i=0;i<b.length;i++) {
                                 b[i].style.border = "solid";
@@ -41,7 +41,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(boolSetting("esp_textareas")) {
+                if(this.boolSetting("esp_textareas")) {
                         let t = document.getElementsByTagName("textarea");
                         for(i=0;i<t.length;i++) {
                                 t[i].style.border = "solid";
@@ -50,7 +50,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(boolSetting("esp_links")) {
+                if(this.boolSetting("esp_links")) {
                         let a = document.getElementsByTagName("a");
                         for(i=0;i<a.length;i++) {
                                 a[i].style.border = "solid";
@@ -59,7 +59,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(boolSetting("esp_selects")) {
+                if(this.boolSetting("esp_selects")) {
                         let s = document.getElementsByTagName("select");
                         for(i=0;i<s.length;i++) {
                                 s[i].style.border = "solid";
@@ -71,7 +71,7 @@ class InputEsp extends module {
         }
 
         onDeactivate() {
-                if(boolSetting("esp_inputs")) {
+                if(this.boolSetting("esp_inputs")) {
                         let x = document.getElementsByTagName("input");
                         for(i=0;i<x.length;i++) {
                                 x[i].style.border = "none";
@@ -80,7 +80,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(boolSetting("esp_buttons")) {
+                if(this.boolSetting("esp_buttons")) {
                         let b = document.getElementsByTagName("button");
                         for(i=0;i<b.length;i++) {
                                 b[i].style.border = "none";
@@ -89,7 +89,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(boolSetting("esp_textareas")) {
+                if(this.boolSetting("esp_textareas")) {
                         let t = document.getElementsByTagName("textarea");
                         for(i=0;i<t.length;i++) {
                                 t[i].style.border = "none";
@@ -98,7 +98,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(boolSetting("esp_links")) {
+                if(this.boolSetting("esp_links")) {
                         let a = document.getElementsByTagName("a");
                         for(i=0;i<a.length;i++) {
                                 a[i].style.border = "none";
@@ -107,7 +107,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(boolSetting("esp_selects")) {
+                if(this.boolSetting("esp_selects")) {
                         let s = document.getElementsByTagName("select");
                         for(i=0;i<s.length;i++) {
                                 s[i].style.border = "none";
