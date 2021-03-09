@@ -14,11 +14,21 @@ function registerBoolSetting(tiedModuleId, displayName, varName, defaultValue) {
                 setting.checked = false;
         };
         setTimeout(function() {
-                if(document.getElementById(tiedModuleId + "-moduleS-setting-container")?.hasChildNodes()) {
-                        document.getElementById(tiedModuleId + "-moduleS-setting-container")?.appendChild(br);
+                try {
+                        if(document.getElementById(tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
+                                document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(br);
+                        }
+                        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(setting);
+                        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(label);
+                } catch {
+                        setTimeout(function() {
+                                if(document.getElementById(tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
+                                        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(br);
+                                }
+                                document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(setting);
+                                document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(label);
+                        },1000)
                 }
-                document.getElementById(tiedModuleId + "-moduleS-setting-container")?.appendChild(setting);
-                document.getElementById(tiedModuleId + "-moduleS-setting-container")?.appendChild(label);
         },1010);
 };
 
@@ -46,14 +56,27 @@ function registerIntSetting(tiedModuleId, displayName, varName, defaultValue, mi
         setting.min = minValue;
         setting.max = maxValue;
         setTimeout(function() {
-                if(document.getElementById(tiedModuleId + "-moduleS-setting-container")?.hasChildNodes()) {
-                        document.getElementById(tiedModuleId + "-moduleS-setting-container")?.appendChild(br);
+                try {
+                        if(document.getElementById(tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
+                                document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(br);
+                        }
+                        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(setting);
+                        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(label);
+                        document.getElementById(varName + "-intSetting").addEventListener('change', function() {
+                                document.getElementById(varName + "-intSetting-label").innerHTML = displayName + ": " + document.getElementById(varName + "-intSetting").value;
+                        })
+                } catch {
+                        setTimeout(function() {
+                                if(document.getElementById(tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
+                                        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(br);
+                                }
+                                document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(setting);
+                                document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(label);
+                                document.getElementById(varName + "-intSetting").addEventListener('change', function() {
+                                        document.getElementById(varName + "-intSetting-label").innerHTML = displayName + ": " + document.getElementById(varName + "-intSetting").value;
+                                })
+                        },1000)
                 }
-                document.getElementById(tiedModuleId + "-moduleS-setting-container")?.appendChild(setting);
-                document.getElementById(tiedModuleId + "-moduleS-setting-container")?.appendChild(label);
-                document.getElementById(varName + "-intSetting").addEventListener('change', function() {
-                        document.getElementById(varName + "-intSetting-label").innerHTML = displayName + ": " + document.getElementById(varName + "-intSetting").value;
-                })
         },1010);
 }
 
