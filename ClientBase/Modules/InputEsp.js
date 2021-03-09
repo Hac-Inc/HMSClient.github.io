@@ -8,19 +8,16 @@ class InputEsp extends module {
                 this.toggleable = true;
                 this.hasSettings = true;
 
-                this.registerBoolSetting(this.ModuleId, "Inputs", "esp_inputs", true);
-                this.registerBoolSetting(this.ModuleId, "Buttons", "esp_buttons", true);
-                this.registerBoolSetting(this.ModuleId, "Textareas", "esp_textarea", true);
-                this.registerBoolSetting(this.ModuleId, "Links", "esp_links", true);
-                this.registerBoolSetting(this.ModuleId, "Selects", "esp_selects", true);
+                //this.registerBoolSetting(this.ModuleId, "Inputs", "esp_inputs", true);
+                //this.registerBoolSetting(this.ModuleId, "Buttons", "esp_buttons", true);
+                //this.registerBoolSetting(this.ModuleId, "Textareas", "esp_textarea", true);
+                //this.registerBoolSetting(this.ModuleId, "Links", "esp_links", true);
+                //this.registerBoolSetting(this.ModuleId, "Selects", "esp_selects", true);
 
                 this.color;
         }
 
-        whileActive() {
-                console.log("this does indeed work")
-        }
-        
+        /*
         onActivate() {
                 this.color = prompt("Please type the color for the ESP: ");
                 if(this.boolSetting("esp_inputs")) {
@@ -115,6 +112,6 @@ class InputEsp extends module {
                                 s[i].style.borderWidth = "5px";
                         }
                 }
-        }
+        } */
 
 }
