@@ -19,11 +19,7 @@ class module {
                         setting.checked = false;
                 };
                 setTimeout(function() {
-                        if(document.getElementById(tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
-                                document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(br);
-                        }
-                        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(setting);
-                        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(label);
+                        drawModuleBoolSetting(tiedModuleId, setting, label);
                 },2010);
         };
         
@@ -51,14 +47,7 @@ class module {
                 setting.min = minValue;
                 setting.max = maxValue;
                 setTimeout(function() {
-                        if(document.getElementById(tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
-                                document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(br);
-                        }
-                        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(setting);
-                        document.getElementById(tiedModuleId + "-moduleS-setting-container").appendChild(label);
-                        document.getElementById(varName + "-intSetting").addEventListener('change', function() {
-                                document.getElementById(varName + "-intSetting-label").innerHTML = displayName + ": " + document.getElementById(varName + "-intSetting").value;
-                        })
+                        drawModuleIntSetting(tiedModuleId, setting, label, displayName, varName)
                 },2010);
         }
         
