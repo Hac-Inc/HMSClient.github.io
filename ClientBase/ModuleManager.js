@@ -8,11 +8,11 @@ class module {
                 this.category;    //for the category you must put the name of a subcategory.
                 this.tooltip;
                 this.toggleable = false;
+                this.hasSettings = false;
 
                 this.active = false;
 
 
-                //this.settings;
         }
         getModuleName() {
                 return this.ModuleName;
