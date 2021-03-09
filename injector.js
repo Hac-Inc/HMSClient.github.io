@@ -65,6 +65,10 @@ function inject() {
                 m.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleManager.js";
                 document.getElementById("HMSClientScriptBundle").appendChild(m);
 
+                t = document.createElement('script');
+                t.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/Settings.js";
+                document.getElementById("HMSClientScriptBundle").appendChild(t);
+
                 for(i=0;i<client_files.length;i++) {
                         x = document.createElement('script');
                         x.src = client_files[i];
@@ -84,6 +88,10 @@ function inject() {
                 m = document.createElement('script');
                 m.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleManager.js";
                 document.getElementById("HMSClientScriptBundle").appendChild(m);
+
+                t = document.createElement('script');
+                t.src = "https://hac-inc.github.io/HMSClient.github.io/ClientBase/Settings.js";
+                document.getElementById("HMSClientScriptBundle").appendChild(t);
 
                 for(i=0;i<client_files.length;i++) {
                         x = document.createElement('script');
@@ -110,6 +118,10 @@ function injectDev() {
                 m.src = "ClientBase/ModuleManager.js";
                 document.getElementById("HMSClientScriptBundle").appendChild(m);
 
+                t = document.createElement('script');
+                t.src = "ClientBase/Settings.js";
+                document.getElementById("HMSClientScriptBundle").appendChild(t);
+
                 for(i=0;i<client_dev_files.length;i++) {
                         x = document.createElement('script');
                         x.src = client_dev_files[i];
@@ -129,6 +141,10 @@ function injectDev() {
                 m = document.createElement('script');
                 m.src = "ClientBase/ModuleManager.js";
                 document.getElementById("HMSClientScriptBundle").appendChild(m);
+
+                t = document.createElement('script');
+                t.src = "ClientBase/Settings.js";
+                document.getElementById("HMSClientScriptBundle").appendChild(t);
 
                 for(i=0;i<client_dev_files.length;i++) {
                         x = document.createElement('script');
