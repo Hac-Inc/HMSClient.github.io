@@ -11,6 +11,16 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/TabFreeze.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/TabDisguise.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/PaperclipsMultiplier.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/moreCreativity.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/InputEsp.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/FpsCounter.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/HudArrayWindow.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/Autoclicker.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DarkMode.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/JsExecuter.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/SpaceplanWattMultiplier.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/ChangeFont.js',
+
 
         //Compilers:
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/ModuleInitalizer.js'
@@ -28,6 +38,15 @@ const client_dev_files = [
         'ClientBase/Modules/TabFreeze.js',
         'ClientBase/Modules/TabDisguise.js',
         'ClientBase/Modules/PaperclipsMultiplier.js',
+        'ClientBase/Modules/moreCreativity.js',
+        'ClientBase/Modules/InputEsp.js',
+        'ClientBase/Modules/FpsCounter.js',
+        'ClientBase/Modules/HudArrayWindow.js',
+        'ClientBase/Modules/Autoclicker.js',
+        'ClientBase/Modules/DarkMode.js',
+        'ClientBase/Modules/JsExecuter.js',
+        'ClientBase/Modules/SpaceplanWattMultiplier.js',
+        'ClientBase/Modules/ChangeFont.js',
 
         //Compilers:
         'ClientBase/ModuleInitalizer.js'

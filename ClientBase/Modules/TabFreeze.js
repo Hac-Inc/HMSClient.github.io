@@ -4,6 +4,7 @@ class TabFreeze extends module {
                 this.ModuleName = "Tab Freezer";
                 this.ModuleId = "TabFreeze";
                 this.category = "tab";
+                this.tooltip = "Freezes the tab your on."
         }
         execute() {
                 console.log("clicked")

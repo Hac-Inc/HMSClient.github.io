@@ -3,60 +3,93 @@ class module_sub_category {
                 this.name = name;
                 this.parentCategory = parent;
         }
+        toggleVisibility() {
+                if(document.getElementById(this.name + "-subCategory").style.display == "none") {
+                        document.getElementById(this.name + "-subCategory").style.display = null;
+                } else {
+                        document.getElementById(this.name + "-subCategory").style.display = "none";
+                }
+        }
+        toggleVisibilityS() {
+                if(document.getElementById(this.name + "-subCategoryS").style.display == "none") {
+                        document.getElementById(this.name + "-subCategoryS").style.display = null;
+                } else {
+                        document.getElementById(this.name + "-subCategoryS").style.display = "none";
+                }
+        }
 }
 
 //create your subcategorys here:
+let hud_Subcategory = new module_sub_category("hud", "visual");
+let page_Subcategory = new module_sub_category("page","visual");
 let misc_Subcategory = new module_sub_category("misc", "misc");
 let tab_Subcategory = new module_sub_category("tab", "misc");
 let membean_Subcategory = new module_sub_category("membean", "quiz");
 let paperclips_Subcategory = new module_sub_category("paperclips", "games");
+let spaceplan_Subcategory = new module_sub_category("spaceplan", "games");
 
 
 const module_categorys = [
+        "visual",
         "misc",
         "quiz",
         "games"
 ]
+//when assigning a category to a module, you must use the name of a module sub category, not just the category name.
 const module_sub_categorys = [
+        hud_Subcategory,
+        page_Subcategory,
         misc_Subcategory,
         tab_Subcategory,
         membean_Subcategory,
-        paperclips_Subcategory
+        paperclips_Subcategory,
+        spaceplan_Subcategory
 ]
 
 
 //constructs all the elements into one and builds the client
 function buildHMSClient() {
         let x = document.createElement('div');
-        x.id = "HMSClientWindow"
+        x.id = "HMSClientWindow";
+        x.style.display = "none";
         x.style.padding = "5px;";
-        x.style.background = "#525252";
+        x.style.backgroundColor = "#525252";
         x.style.border = "solid";
         x.style.borderWidth = "1px";
         x.style.position = "absolute";
         x.style.top = "20px";
         x.style.left = "20px";
         x.style.zIndex = "999999";
+        x.style.overflowY = "scroll";
+        x.style.maxHeight = window.innerHeight - 150 + "px";
         document.body.appendChild(x);
-        document.getElementById("HMSClientWindow").appendChild(newDiv("HMSClientWindow-header"))
-        document.getElementById("HMSClientWindow-header").innerHTML = "HMS Client";
+        document.getElementById("HMSClientWindow").appendChild(newTextBlock("HMSClientWindow-header", "HMS Client", "#FFF", null, "#FFF"));
         document.getElementById("HMSClientWindow-header").style.cursor = "move";
         document.getElementById("HMSClientWindow-header").style.color = "#FFF";
         dragElement(document.getElementById("HMSClientWindow"));
+        //creates the categories:
         for(i=0;i<module_categorys.length;i++) {
-                document.getElementById("HMSClientWindow").appendChild(newDiv(module_categorys[i] + "-category"));
-                document.getElementById(module_categorys[i] + "-category").appendChild(newDiv(module_categorys[i] + "-categoryHeader", '<font color="lime">' + module_categorys[i] + '</font>'))
+                document.getElementById("HMSClientWindow").appendChild(newDiv(module_categorys[i] + "-categoryHolder"));
+                document.getElementById(module_categorys[i] + "-categoryHolder").appendChild(newTextBlock(module_categorys[i] + "-categoryHeader", module_categorys[i], "lime"))
+                document.getElementById(module_categorys[i] + "-categoryHolder").appendChild(newFancyDiv(module_categorys[i] + "-category"))
                 let br = document.createElement('div');
-                br.style.background = "rgb(0, 0, 0, 1)";
-                br.style.height = "10px";
+                br.style.backgroundColor = "#303030";
+                br.style.height = "15px";
                 document.getElementById("HMSClientWindow").appendChild(br);
         }
+        //creates the subcategories:
         for(i=0;i<module_sub_categorys.length;i++) {
-                document.getElementById(module_sub_categorys[i].parentCategory + "-category").appendChild(newDiv(module_sub_categorys[i].name + "-subCategory"))
-                document.getElementById(module_sub_categorys[i].name + "-subCategory").appendChild(newDiv(module_sub_categorys[i].name + "-subCategoryHeader", '<font color="green">' + module_sub_categorys[i].name + '</font>'));
+                document.getElementById(module_sub_categorys[i].parentCategory + "-category").appendChild(newDiv(module_sub_categorys[i].name + "-subCategoryHolder"));
+                let divbr = document.createElement('div');
+                divbr.style.backgroundColor = "#303030";
+                divbr.style.height = "10px";
+                document.getElementById(module_sub_categorys[i].parentCategory + "-category").appendChild(divbr);
+                document.getElementById(module_sub_categorys[i].name + "-subCategoryHolder").appendChild(newTextBlock(module_sub_categorys[i].name + "-subCategoryHeader", module_sub_categorys[i].name, "#FFF", null, "#FFF", null, null, null, i, "array"));
+                document.getElementById(module_sub_categorys[i].name + "-subCategoryHolder").appendChild(newFancyDiv(module_sub_categorys[i].name + "-subCategory", null, null, null, "#FFF"))  ;
         }
+        //insertes all the modules in their designated subcategory:
         for(i=0;i<modules.length;i++) {
-                document.getElementById(modules[i].getModuleCategory() + "-subCategory").appendChild(newButton((modules[i].getModuleId()), (modules[i].getModuleName()), i));
+                document.getElementById(modules[i].getModuleCategory() + "-subCategory").appendChild(newButton((modules[i].getModuleId() + "-module"), (modules[i].getModuleName()), i, modules[i].getModuleTooltip(), "#a3a3a3", "#6e6e6e"));
                 let br = document.createElement('br');
                 document.getElementById(modules[i].getModuleCategory() + "-subCategory").appendChild(br);
         }
@@ -67,6 +100,83 @@ function buildHMSClient() {
                 let br = document.createElement('br');
                 document.getElementById("HMSClientWindow").appendChild(br);
         }*/
+}
+
+//builds the main screen
+function buildHMSClientScreen() {
+        let x = document.createElement('div');
+        x.id = "HMSClientScreen";
+        x.style.width = window.innerWidth + "px";
+        x.style.height = window.innerHeight + "px";
+        x.style.position = "absolute";
+        x.style.top = "0px";
+        x.style.left = "0px";
+        x.style.display = "none";
+        x.style.zIndex = "99999999";
+        x.style.padding = "5px";
+        x.style.backgroundColor = "rgb(112, 112, 112, 0.75)";
+        document.body.appendChild(x);
+
+        //creates the categories:
+        for(i=0;i<module_categorys.length;i++) {
+                document.getElementById("HMSClientScreen").appendChild(newDiv(module_categorys[i] + "-categoryHolderS"));
+                document.getElementById(module_categorys[i] + "-categoryHolderS").appendChild(newTextBlock(module_categorys[i] + "-categoryHolderS-header", module_categorys[i], "lime"))
+                document.getElementById(module_categorys[i] + "-categoryHolderS").appendChild(newFancyDiv(module_categorys[i] + "-categoryS"))
+                document.getElementById(module_categorys[i] + "-categoryHolderS").style.display = "inline-block";
+                document.getElementById(module_categorys[i] + "-categoryHolderS").style.verticalAlign = "top";
+                let xbr = document.createElement("div");
+                xbr.style.display = "inline-block";
+                xbr.style.width = "5px";
+                document.getElementById("HMSClientScreen").appendChild(xbr);
+        }
+        //creates the subcategories:
+        for(i=0;i<module_sub_categorys.length;i++) {
+                document.getElementById(module_sub_categorys[i].parentCategory + "-categoryS").appendChild(newDiv(module_sub_categorys[i].name + "-subCategoryHolderS"));
+                let divbr = document.createElement('div');
+                divbr.style.backgroundColor = "#303030";
+                divbr.style.height = "10px";
+                document.getElementById(module_sub_categorys[i].parentCategory + "-categoryS").appendChild(divbr);
+                document.getElementById(module_sub_categorys[i].name + "-subCategoryHolderS").appendChild(newTextBlock(module_sub_categorys[i].name + "-subCategoryHeaderS", module_sub_categorys[i].name, "#FFF", null, "#FFF", null, null, null, i, "hud"));
+                document.getElementById(module_sub_categorys[i].name + "-subCategoryHolderS").appendChild(newFancyDiv(module_sub_categorys[i].name + "-subCategoryS", null, null, null, "#FFF"))  ;
+        }
+        //insertes all the modules in their designated subcategory:
+        for(i=0;i<modules.length;i++) {
+                document.getElementById(modules[i].getModuleCategory() + "-subCategoryS").appendChild(newButton((modules[i].getModuleId() + "-moduleS"), (modules[i].getModuleName()), i, modules[i].getModuleTooltip(), "#a3a3a3", "#6e6e6e"));
+                let br = document.createElement('br');
+                document.getElementById(modules[i].getModuleCategory() + "-subCategoryS").appendChild(br);
+        }
+
+        document.body.addEventListener('keypress', e => {
+                if(e.key === "`") {
+                        toggleHMSClientScreen();
+                }
+        })
+
+        
+}
+
+function notifySuccessfullInjection() {
+        //success inject notifier
+        document.body.appendChild(newTextBlock("SuccessInjectClient", "HMS Client sucessfully injected! Press the ` key on your keyboard to open the HUD menu.", "lime", null, null, 100, 200, "absolute"));
+        document.getElementById("SuccessInjectClient").style.top = "5px";
+        document.getElementById("SuccessInjectClient").style.zIndex = "99999";
+        setTimeout(
+                function() {
+                        document.getElementById("SuccessInjectClient").remove();
+                }, 2500
+        );
+}
+//toggles the main module screen when the user presses the ` key
+function toggleHMSClientScreen() {
+        if(document.getElementById("HMSClientScreen").style.display == "none") {
+                document.getElementById("HMSClientScreen").style.display = "";
+                document.getElementById("HMSClientScreen").style.top = document.documentElement.scrollTop + "px";
+                document.getElementById("HMSClientScreen").style.left = document.documentElement.scrollLeft + "px";
+                document.body.style.overflow = "hidden";
+        } else {
+                document.getElementById("HMSClientScreen").style.display = "none";
+                document.body.style.overflow = "";
+        };
 }
 
 //allows the window to be draggable:
