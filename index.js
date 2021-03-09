@@ -165,6 +165,106 @@ function buildHMSClientScreen() {
         
 }
 
+
+
+
+
+//SETTINGS:
+
+
+
+function registerBoolSetting(tiedModuleId, displayName, varName, defaultValue) {
+        let setting = new m_boolSetting(tiedModuleId, displayName, varName, defaultValue);
+        m_settings.push(setting);
+};
+
+function boolSetting(setting) {
+        if(document.getElementById(setting + "-boolSetting").checked == true) {
+                return true;
+        } else if(document.getElementById(setting + "-boolSetting").checked == false) {
+                return false;
+        }
+}
+
+
+function registerIntSetting(tiedModuleId, displayName, varName, defaultValue, minValue, maxValue) {
+        let setting = new m_intSetting(tiedModuleId, displayName, varName, defaultValue, minValue, maxValue);
+        m_settings.push(setting);
+}
+
+function intSetting(setting) {
+        let value = document.getElementById(setting + "-intSetting").value;
+        return value;
+}
+
+
+
+
+
+function drawBoolSetting(i) {
+        let br = document.createElement("br");
+        let setting = document.createElement("input");
+        let label = document.createElement('label');
+        label.for = m_settings[i].varName + "-boolSetting";
+        label.innerHTML = m_settings[i].displayName;
+        label.style.fontFamily = "arial";
+        setting.type = "checkbox";
+        setting.id = m_settings[i].varName + "-boolSetting";
+        setting.name = m_settings[i].displayName;
+        if(m_settings[i].defaultValue == true) {
+                setting.checked = true;
+        } else {
+                setting.checked = false;
+        };
+        setTimeout(function() {
+                if(document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
+                        document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(br);
+                }
+                document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(setting);
+                document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(label);
+        },10);
+}
+
+function drawIntSetting(i) {
+        let br = document.createElement("br");
+        let setting = document.createElement("input");
+        let label = document.createElement('label');
+        label.for = m_settings[i].varName + "-intSetting";
+        label.innerHTML = m_settings[i].displayName + ": " + m_settings[i].defaultValue;
+        label.style.fontFamily = "arial";
+        label.id = m_settings[i].varName + "-intSetting-label";
+        setting.type = "range";
+        setting.id = m_settings[i].varName + "-intSetting";
+        setting.name = m_settings[i].displayName;
+        setting.value = m_settings[i].defaultValue;
+        setting.min = m_settings[i].minValue;
+        setting.max = m_settings[i].maxValue;
+        setTimeout(function() {
+                if(document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
+                        document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(br);
+                }
+                document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(setting);
+                document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(label);
+                document.getElementById(m_settings[i].varName + "-intSetting").addEventListener('change', function() {
+                        document.getElementById(m_settings[i].varName + "-intSetting-label").innerHTML = m_settings[i].displayName + ": " + document.getElementById(m_settings[i].varName + "-intSetting").value;
+                })
+        },100);
+}
+
+
+function buildHMSClientScreenSettings() {
+        for(i=0;i<m_settings.length;i++) {
+                if(m_settings[i].settingType == "int") {
+                        drawIntSetting(i);
+                } else if(m_settings[i].settingType == "bool") {
+                        drawBoolSetting(i);
+                }
+        }
+}
+
+
+
+
 function notifySuccessfullInjection() {
         //success inject notifier
         document.body.appendChild(newTextBlock("SuccessInjectClient", "HMS Client sucessfully injected! Press the ` key on your keyboard to open the HUD menu.", "lime", null, null, 100, 200, "absolute"));

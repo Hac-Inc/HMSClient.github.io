@@ -40,9 +40,14 @@ function initModules() {
         } catch (error) {
                 alert("Injection Failed. Please refresh your page and inject again. This could be due to poor internet connection or you are trying to inject on a page with large files.");
         }
+        
 
 }
 
 setTimeout(initModules(), 1000);
-setTimeout(buildHMSClient(), 1001);
-setTimeout(buildHMSClientScreen(), 1001);
+setTimeout(HMSClientRun(), 1000);
+function HMSClientRun() {
+        setTimeout(buildHMSClient(), 1201);
+        setTimeout(buildHMSClientScreen(), 1201);
+        setTimeout(buildHMSClientScreenSettings(), 2300);
+}
