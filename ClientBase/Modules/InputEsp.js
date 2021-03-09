@@ -6,7 +6,7 @@ class InputEsp extends module {
                 this.category = "page";
                 this.tooltip = "Highlights all inputs on the page with the chosen color."
                 this.toggleable = true;
-                this.hasSettings = true;
+                //this.hasSettings = true;
 
                 //this.registerBoolSetting(this.ModuleId, "Inputs", "esp_inputs", true);
                 //this.registerBoolSetting(this.ModuleId, "Buttons", "esp_buttons", true);

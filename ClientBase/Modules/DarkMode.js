@@ -5,7 +5,7 @@ class DarkMode extends module {
                 this.ModuleId = "DarkMode";
                 this.category = "page";
                 this.tooltip = "Makes the body element dark. *MAY NOT WORK ON ALL SITES*";
-                this.hasSettings = true;
+                //this.hasSettings = true;
                 //this.registerBoolSetting(this.ModuleId, "Super Dark Mode", "darkmode_superdark", false);
         }
         execute() {
