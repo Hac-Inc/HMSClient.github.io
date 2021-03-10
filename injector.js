@@ -22,7 +22,8 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/JsExecuter.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/SpaceplanWattMultiplier.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/ChangeFont.js',
-        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/TestModule.js'
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/TestModule.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/HudArrayList.js'
 
 ]
 
@@ -49,7 +50,8 @@ const client_dev_files = [
         'ClientBase/Modules/JsExecuter.js',
         'ClientBase/Modules/SpaceplanWattMultiplier.js',
         'ClientBase/Modules/ChangeFont.js',
-        'ClientBase/Modules/TestModule.js'
+        'ClientBase/Modules/TestModule.js',
+        'ClientBase/Modules/HudArrayList.js'
 
 ]
 
@@ -76,7 +78,8 @@ const client_debug_files = [
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/JsExecuter.js',
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/SpaceplanWattMultiplier.js',
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/ChangeFont.js',
-        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/TestModule.js'
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/TestModule.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/HudArrayList.js'
 
 ]
 
