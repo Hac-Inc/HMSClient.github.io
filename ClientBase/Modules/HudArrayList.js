@@ -6,6 +6,8 @@ class HudArrayList extends module {
                 this.category = "hud";
                 this.tooltip = "Toggles the active modules array list";
                 this.toggleable = true;
+                this.hasSettings = true;
+                registerBoolSetting(this.ModuleId, "Solid Background", "hal_backFilled", false);
         }
 
         onActivate() {
@@ -15,6 +17,9 @@ class HudArrayList extends module {
                 x.style.right = "0px";
                 x.style.zIndex = "9999999"
                 x.style.display = "grid";
+                if(boolSetting("hal_backFilled")) {
+                        x.style.backgroundColor = "#525252";
+                }
                 x.id = "HMSClientModuleArrayList";
                 document.body.appendChild(x);
                 for(i=0;i<modules.length;i++) {
