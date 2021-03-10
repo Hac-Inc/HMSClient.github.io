@@ -60,12 +60,14 @@ class module {
                                 this.onToggle();
                                 document.getElementById(this.ModuleId + "-module").style.color = "#00ff15";
                                 document.getElementById(this.ModuleId + "-moduleS").style.color = "#00ff15";
+                                drawArrayListModule(this.ModuleId, this.ModuleName);
                         } else if(this.active == true) {
                                this.active = false;
                                this.onDeactivate();
                                this.onToggle(); 
                                document.getElementById(this.ModuleId + "-module").style.color = "black";
                                document.getElementById(this.ModuleId + "-moduleS").style.color = "black";
+                               removeArrayListModule(this.ModuleId);
                         }
                 }
         };
@@ -74,6 +76,16 @@ class module {
         
         
 
+}
+
+
+
+function readModuleActive(moduleId) {
+        for(i=0;i<modules.length;i++) {
+                if(modules[i].ModuleId == moduleId) {
+                        return modules[i].active;
+                }
+        }
 }
 
 

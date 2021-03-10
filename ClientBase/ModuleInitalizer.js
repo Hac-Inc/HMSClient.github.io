@@ -17,6 +17,7 @@ function initModules() {
                 let SpaceplanWattMultiplier_Module = new SpaceplanWattMultiplier;
                 let FontChanger_Module = new ChangeFont;
                 let TestModule_Module = new TestModule;
+                let HudArrayList_Module = new HudArrayList;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
@@ -33,6 +34,7 @@ function initModules() {
                 modules.push(SpaceplanWattMultiplier_Module);
                 modules.push(FontChanger_Module);
                 modules.push(TestModule_Module);
+                modules.push(HudArrayList_Module);
                 
                 
                 
