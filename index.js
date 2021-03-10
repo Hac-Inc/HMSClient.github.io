@@ -28,6 +28,7 @@ let tab_Subcategory = new module_sub_category("tab", "misc", "Tab");
 let membean_Subcategory = new module_sub_category("membean", "quiz", "Membean");
 let paperclips_Subcategory = new module_sub_category("paperclips", "games", "Paperclips");
 let spaceplan_Subcategory = new module_sub_category("spaceplan", "games", "Spaceplan");
+let devTools_Subcategory = new module_sub_category("dev_tools", "devTools", "Tools");
 
 //let premium_visual_Subcategory = new module_sub_category("premium_visual", "premium", "Visual");
 
@@ -36,7 +37,8 @@ const module_categorys = [
         "visual",
         "misc",
         "quiz",
-        "games"
+        "games",
+        "devTools"
 
         //"premium"
 ]
@@ -48,7 +50,8 @@ const module_sub_categorys = [
         tab_Subcategory,
         membean_Subcategory,
         paperclips_Subcategory,
-        spaceplan_Subcategory
+        spaceplan_Subcategory,
+        devTools_Subcategory
         
         //premium_visual_Subcategory
 ]
