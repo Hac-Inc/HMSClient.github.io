@@ -35,7 +35,7 @@
   Contributing
 </h2>
 <p>
-  If you would like to contribute, please fork the repository, change or add the things you want, and create a pull request. If you don't know where you should start, take a look at the issues tab and see if you could be of any help there.
+  If you would like to contribute, please fork the repository, change or add the things you want, and create a pull request. We will then accept / deny. If you don't know where you should start, take a look at the issues tab and see if you could be of any help there.
 </p>
 <h2>
   Help
