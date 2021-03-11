@@ -16,14 +16,14 @@
 <p>
   For the current release, please install the client using the link below:
 </p>
-<a>
+<a href="https://sites.google.com/view/hac-inc/home">
   https://sites.google.com/view/hac-inc/home
 </a>
 <br>
 <p>
   or this link if the one above dosent work:
 </p>
-<a>
+<a href="https://hac-inc.github.io/HMSClient.github.io/resources/install.html">
   https://hac-inc.github.io/HMSClient.github.io/resources/install.html
 </a>
 <br>
