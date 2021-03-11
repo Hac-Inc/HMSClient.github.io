@@ -26,7 +26,10 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/HudArrayList.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DevListenerLogger.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DevFunctionLogger.js'
+         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/colorblind.js'
 
+
+        
 ]
 
 
@@ -55,7 +58,8 @@ const client_dev_files = [
         'ClientBase/Modules/TestModule.js',
         'ClientBase/Modules/HudArrayList.js',
         'ClientBase/Modules/DevListenerLogger.js',
-        'ClientBase/Modules/DevFunctionLogger.js'
+        'ClientBase/Modules/DevFunctionLogger.js',
+        'ClientBase/Modules/colorblind.js'
 
 ]
 
@@ -85,7 +89,10 @@ const client_debug_files = [
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/TestModule.js',
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/HudArrayList.js',
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/DevListenerLogger.js',
-        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/DevFunctionLogger.js'
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/DevFunctionLogger.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/colorblind.js'
+
+]
 
 ]
 
