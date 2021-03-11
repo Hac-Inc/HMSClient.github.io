@@ -25,8 +25,8 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/TestModule.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/HudArrayList.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DevListenerLogger.js',
-        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DevFunctionLogger.js'
-         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/colorblind.js'
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DevFunctionLogger.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/colorblind.js'
 
 
         
