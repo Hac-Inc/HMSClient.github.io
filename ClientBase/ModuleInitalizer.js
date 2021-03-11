@@ -19,6 +19,7 @@ function initModules() {
                 let TestModule_Module = new TestModule;
                 let HudArrayList_Module = new HudArrayList;
                 let DevListenerLogger_Module = new DevListenerLogger;
+                let DevFunctionLogger_Module = new DevFunctionLogger;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
@@ -37,6 +38,7 @@ function initModules() {
                 modules.push(TestModule_Module);
                 modules.push(HudArrayList_Module);
                 modules.push(DevListenerLogger_Module);
+                modules.push(DevFunctionLogger_Module);
                 
                 
                 
