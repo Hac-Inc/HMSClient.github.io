@@ -20,6 +20,7 @@ function initModules() {
                 let HudArrayList_Module = new HudArrayList;
                 let DevListenerLogger_Module = new DevListenerLogger;
                 let DevFunctionLogger_Module = new DevFunctionLogger;
+                let XrayGoggles_Module = new XrayGoggles;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
@@ -39,6 +40,7 @@ function initModules() {
                 modules.push(HudArrayList_Module);
                 modules.push(DevListenerLogger_Module);
                 modules.push(DevFunctionLogger_Module);
+                modules.push(XrayGoggles_Module);
                 
                 
                 
@@ -46,7 +48,7 @@ function initModules() {
         } catch (error) {
                 alert("Injection Failed. Please refresh your page and inject again. This could be due to poor internet connection or you are trying to inject on a page with large files.");
         }
-        
+
 
 }
 

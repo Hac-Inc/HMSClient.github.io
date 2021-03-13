@@ -49,6 +49,7 @@ function newButton(id, DisplayName, moduleListId, hoverText, backgroundColor, bo
         button.style.borderWidth = "2px";
         button.style.borderColor = borderColor;
         button.style.outline = "none";
+        button.style.cursor = "pointer";
         setTimeout(
                 function() {
                         document.getElementById(id).addEventListener('click', function() {modules[moduleListId].toggle()})
