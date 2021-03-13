@@ -6,21 +6,21 @@ class InputEsp extends module {
                 this.category = "page";
                 this.tooltip = "Highlights all inputs on the page with the chosen color."
                 this.toggleable = true;
-                //this.hasSettings = true;
+                this.hasSettings = true;
 
-                //this.registerBoolSetting(this.ModuleId, "Inputs", "esp_inputs", true);
-                //this.registerBoolSetting(this.ModuleId, "Buttons", "esp_buttons", true);
-                //this.registerBoolSetting(this.ModuleId, "Textareas", "esp_textarea", true);
-                //this.registerBoolSetting(this.ModuleId, "Links", "esp_links", true);
-                //this.registerBoolSetting(this.ModuleId, "Selects", "esp_selects", true);
+                registerBoolSetting(this.ModuleId, "Inputs", "esp_inputs", true);
+                registerBoolSetting(this.ModuleId, "Buttons", "esp_buttons", true);
+                registerBoolSetting(this.ModuleId, "Textareas", "esp_textarea", true);
+                registerBoolSetting(this.ModuleId, "Links", "esp_links", true);
+                registerBoolSetting(this.ModuleId, "Selects", "esp_selects", true);
 
                 this.color;
         }
 
-        /*
+        
         onActivate() {
                 this.color = prompt("Please type the color for the ESP: ");
-                if(this.boolSetting("esp_inputs")) {
+                if(boolSetting("esp_inputs")) {
                         let x = document.getElementsByTagName("input");
                         for(i=0;i<x.length;i++) {
                                 x[i].style.border = "solid";
@@ -29,7 +29,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(this.boolSetting("esp_buttons")) {
+                if(boolSetting("esp_buttons")) {
                         let b = document.getElementsByTagName("button");
                         for(i=0;i<b.length;i++) {
                                 b[i].style.border = "solid";
@@ -38,7 +38,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(this.boolSetting("esp_textareas")) {
+                if(boolSetting("esp_textareas")) {
                         let t = document.getElementsByTagName("textarea");
                         for(i=0;i<t.length;i++) {
                                 t[i].style.border = "solid";
@@ -47,7 +47,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(this.boolSetting("esp_links")) {
+                if(boolSetting("esp_links")) {
                         let a = document.getElementsByTagName("a");
                         for(i=0;i<a.length;i++) {
                                 a[i].style.border = "solid";
@@ -56,7 +56,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(this.boolSetting("esp_selects")) {
+                if(boolSetting("esp_selects")) {
                         let s = document.getElementsByTagName("select");
                         for(i=0;i<s.length;i++) {
                                 s[i].style.border = "solid";
@@ -68,7 +68,7 @@ class InputEsp extends module {
         }
 
         onDeactivate() {
-                if(this.boolSetting("esp_inputs")) {
+                if(boolSetting("esp_inputs")) {
                         let x = document.getElementsByTagName("input");
                         for(i=0;i<x.length;i++) {
                                 x[i].style.border = "none";
@@ -77,7 +77,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(this.boolSetting("esp_buttons")) {
+                if(boolSetting("esp_buttons")) {
                         let b = document.getElementsByTagName("button");
                         for(i=0;i<b.length;i++) {
                                 b[i].style.border = "none";
@@ -86,7 +86,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(this.boolSetting("esp_textareas")) {
+                if(boolSetting("esp_textareas")) {
                         let t = document.getElementsByTagName("textarea");
                         for(i=0;i<t.length;i++) {
                                 t[i].style.border = "none";
@@ -95,7 +95,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(this.boolSetting("esp_links")) {
+                if(boolSetting("esp_links")) {
                         let a = document.getElementsByTagName("a");
                         for(i=0;i<a.length;i++) {
                                 a[i].style.border = "none";
@@ -104,7 +104,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(this.boolSetting("esp_selects")) {
+                if(boolSetting("esp_selects")) {
                         let s = document.getElementsByTagName("select");
                         for(i=0;i<s.length;i++) {
                                 s[i].style.border = "none";
@@ -112,6 +112,6 @@ class InputEsp extends module {
                                 s[i].style.borderWidth = "5px";
                         }
                 }
-        } */
+        } 
 
 }

@@ -1,33 +1,11 @@
 let modules = [];
 
-let m_settings = [];
+var m_settings = [];
 
 
 class module {
 
-        registerBoolSetting(tiedModuleId, displayName, varName, defaultValue) {
-                let setting = new m_boolSetting(tiedModuleId, displayName, varName, defaultValue);
-                m_settings.push(setting);
-        };
         
-        boolSetting(setting) {
-                if(document.getElementById(setting + "-boolSetting").checked == true) {
-                        return true;
-                } else if(document.getElementById(setting + "-boolSetting").checked == false) {
-                        return false;
-                }
-        }
-        
-        
-        registerIntSetting(tiedModuleId, displayName, varName, defaultValue, minValue, maxValue) {
-                let setting = new m_intSetting(tiedModuleId, displayName, varName, defaultValue, minValue, maxValue);
-                m_settings.push(setting);
-        }
-        
-        intSetting(setting) {
-                let value = document.getElementById(setting + "-intSetting").value;
-                return value;
-        }
 
         constructor() {
                 this.ModuleName;
@@ -82,12 +60,14 @@ class module {
                                 this.onToggle();
                                 document.getElementById(this.ModuleId + "-module").style.color = "#00ff15";
                                 document.getElementById(this.ModuleId + "-moduleS").style.color = "#00ff15";
+                                drawArrayListModule(this.ModuleId, this.ModuleName);
                         } else if(this.active == true) {
                                this.active = false;
                                this.onDeactivate();
                                this.onToggle(); 
                                document.getElementById(this.ModuleId + "-module").style.color = "black";
                                document.getElementById(this.ModuleId + "-moduleS").style.color = "black";
+                               removeArrayListModule(this.ModuleId);
                         }
                 }
         };
@@ -100,6 +80,16 @@ class module {
 
 
 
+function readModuleActive(moduleId) {
+        for(i=0;i<modules.length;i++) {
+                if(modules[i].ModuleId == moduleId) {
+                        return modules[i].active;
+                }
+        }
+}
+
+
+
 
 class m_boolSetting {
         constructor(tiedModuleId, displayName, varName, defaultValue) {
@@ -107,6 +97,7 @@ class m_boolSetting {
                 this.displayName = displayName;
                 this.varName = varName;
                 this.defaultValue = defaultValue;
+                this.settingType = "bool";
         }
         draw() {
                 let br = document.createElement("br");
@@ -129,7 +120,7 @@ class m_boolSetting {
                         }
                         document.getElementById(this.tiedModuleId + "-moduleS-setting-container").appendChild(setting);
                         document.getElementById(this.tiedModuleId + "-moduleS-setting-container").appendChild(label);
-                },2010);
+                },10);
         }
 }
 
@@ -141,6 +132,7 @@ class m_intSetting {
                 this.defaultValue = defaultValue;
                 this.minValue = minValue;
                 this.maxValue = maxValue;
+                this.settingType = "int";
         }
         draw() {
                 let br = document.createElement("br");
@@ -165,7 +157,7 @@ class m_intSetting {
                         document.getElementById(this.varName + "-intSetting").addEventListener('change', function() {
                                 document.getElementById(this.varName + "-intSetting-label").innerHTML = this.displayName + ": " + document.getElementById(this.varName + "-intSetting").value;
                         })
-                },2010);
+                },10);
         }
 }
 

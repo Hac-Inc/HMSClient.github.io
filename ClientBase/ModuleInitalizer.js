@@ -17,6 +17,10 @@ function initModules() {
                 let SpaceplanWattMultiplier_Module = new SpaceplanWattMultiplier;
                 let FontChanger_Module = new ChangeFont;
                 let TestModule_Module = new TestModule;
+                let HudArrayList_Module = new HudArrayList;
+                let DevListenerLogger_Module = new DevListenerLogger;
+                let DevFunctionLogger_Module = new DevFunctionLogger;
+                let XrayGoggles_Module = new XrayGoggles;
 
                 //Add them to the compiler list:
                 modules.push(MembeanAC_Module);
@@ -33,6 +37,10 @@ function initModules() {
                 modules.push(SpaceplanWattMultiplier_Module);
                 modules.push(FontChanger_Module);
                 modules.push(TestModule_Module);
+                modules.push(HudArrayList_Module);
+                modules.push(DevListenerLogger_Module);
+                modules.push(DevFunctionLogger_Module);
+                modules.push(XrayGoggles_Module);
                 
                 
                 
@@ -41,8 +49,13 @@ function initModules() {
                 alert("Injection Failed. Please refresh your page and inject again. This could be due to poor internet connection or you are trying to inject on a page with large files.");
         }
 
+
 }
 
 setTimeout(initModules(), 1000);
-setTimeout(buildHMSClient(), 1001);
-setTimeout(buildHMSClientScreen(), 1001);
+setTimeout(HMSClientRun(), 1000);
+function HMSClientRun() {
+        setTimeout(buildHMSClient(), 1201);
+        setTimeout(buildHMSClientScreen(), 1201);
+        setTimeout(buildHMSClientScreenSettings(), 2300);
+}

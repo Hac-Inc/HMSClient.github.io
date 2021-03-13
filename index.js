@@ -1,5 +1,6 @@
 class module_sub_category {
-        constructor(name, parent) {
+        constructor(name, parent, displayName) {
+                this.displayName = displayName || name;
                 this.name = name;
                 this.parentCategory = parent;
         }
@@ -20,20 +21,26 @@ class module_sub_category {
 }
 
 //create your subcategorys here:
-let hud_Subcategory = new module_sub_category("hud", "visual");
-let page_Subcategory = new module_sub_category("page","visual");
-let misc_Subcategory = new module_sub_category("misc", "misc");
-let tab_Subcategory = new module_sub_category("tab", "misc");
-let membean_Subcategory = new module_sub_category("membean", "quiz");
-let paperclips_Subcategory = new module_sub_category("paperclips", "games");
-let spaceplan_Subcategory = new module_sub_category("spaceplan", "games");
+let hud_Subcategory = new module_sub_category("hud", "visual", "HUD");
+let page_Subcategory = new module_sub_category("page","visual", "Page");
+let misc_Subcategory = new module_sub_category("misc", "misc", "Misc");
+let tab_Subcategory = new module_sub_category("tab", "misc", "Tab");
+let membean_Subcategory = new module_sub_category("membean", "quiz", "Membean");
+let paperclips_Subcategory = new module_sub_category("paperclips", "games", "Paperclips");
+let spaceplan_Subcategory = new module_sub_category("spaceplan", "games", "Spaceplan");
+let devTools_Subcategory = new module_sub_category("dev_tools", "devTools", "Tools");
+
+//let premium_visual_Subcategory = new module_sub_category("premium_visual", "premium", "Visual");
 
 
 const module_categorys = [
         "visual",
         "misc",
         "quiz",
-        "games"
+        "games",
+        "devTools"
+
+        //"premium"
 ]
 //when assigning a category to a module, you must use the name of a module sub category, not just the category name.
 const module_sub_categorys = [
@@ -43,7 +50,10 @@ const module_sub_categorys = [
         tab_Subcategory,
         membean_Subcategory,
         paperclips_Subcategory,
-        spaceplan_Subcategory
+        spaceplan_Subcategory,
+        devTools_Subcategory
+        
+        //premium_visual_Subcategory
 ]
 
 
@@ -84,7 +94,7 @@ function buildHMSClient() {
                 divbr.style.backgroundColor = "#303030";
                 divbr.style.height = "10px";
                 document.getElementById(module_sub_categorys[i].parentCategory + "-category").appendChild(divbr);
-                document.getElementById(module_sub_categorys[i].name + "-subCategoryHolder").appendChild(newTextBlock(module_sub_categorys[i].name + "-subCategoryHeader", module_sub_categorys[i].name, "#FFF", null, "#FFF", null, null, null, i, "array"));
+                document.getElementById(module_sub_categorys[i].name + "-subCategoryHolder").appendChild(newTextBlock(module_sub_categorys[i].name + "-subCategoryHeader", module_sub_categorys[i].displayName, "#FFF", null, "#FFF", null, null, null, i, "array"));
                 document.getElementById(module_sub_categorys[i].name + "-subCategoryHolder").appendChild(newFancyDiv(module_sub_categorys[i].name + "-subCategory", null, null, null, "#FFF"))  ;
         }
         //insertes all the modules in their designated subcategory:
@@ -136,7 +146,7 @@ function buildHMSClientScreen() {
                 divbr.style.backgroundColor = "#303030";
                 divbr.style.height = "10px";
                 document.getElementById(module_sub_categorys[i].parentCategory + "-categoryS").appendChild(divbr);
-                document.getElementById(module_sub_categorys[i].name + "-subCategoryHolderS").appendChild(newTextBlock(module_sub_categorys[i].name + "-subCategoryHeaderS", module_sub_categorys[i].name, "#FFF", null, "#FFF", null, null, null, i, "hud"));
+                document.getElementById(module_sub_categorys[i].name + "-subCategoryHolderS").appendChild(newTextBlock(module_sub_categorys[i].name + "-subCategoryHeaderS", module_sub_categorys[i].displayName, "#FFF", null, "#FFF", null, null, null, i, "hud"));
                 document.getElementById(module_sub_categorys[i].name + "-subCategoryHolderS").appendChild(newFancyDiv(module_sub_categorys[i].name + "-subCategoryS", null, null, null, "#FFF"))  ;
         }
         //insertes all the modules in their designated subcategory:
@@ -162,8 +172,131 @@ function buildHMSClientScreen() {
                 }
         })
 
+
+        //watermark:
+        let w = newTextBlock("HMSClientWatermark", "<h2>HMS Client<h2>", "lime", null, null, "25px");
+        w.style.position = "absolute";
+        w.style.left = "";
+        w.style.top = "";
+        w.style.right = "20px";
+        w.style.bottom = "20px";
+        document.getElementById("HMSClientScreen").appendChild(w);
+
+
         
 }
+
+
+
+
+
+//SETTINGS:
+
+
+
+function registerBoolSetting(tiedModuleId, displayName, varName, defaultValue) {
+        let setting = new m_boolSetting(tiedModuleId, displayName, varName, defaultValue);
+        m_settings.push(setting);
+};
+
+function boolSetting(setting) {
+        if(document.getElementById(setting + "-boolSetting").checked == true) {
+                return true;
+        } else if(document.getElementById(setting + "-boolSetting").checked == false) {
+                return false;
+        }
+}
+
+
+function registerIntSetting(tiedModuleId, displayName, varName, defaultValue, minValue, maxValue) {
+        let setting = new m_intSetting(tiedModuleId, displayName, varName, defaultValue, minValue, maxValue);
+        m_settings.push(setting);
+}
+
+function intSetting(setting) {
+        let value = document.getElementById(setting + "-intSetting").value;
+        return value;
+}
+
+
+
+
+
+function drawBoolSetting(i) {
+        let br = document.createElement("br");
+        let setting = document.createElement("input");
+        let label = document.createElement('label');
+        label.for = m_settings[i].varName + "-boolSetting";
+        label.innerHTML = m_settings[i].displayName;
+        label.style.fontFamily = "arial";
+        setting.type = "checkbox";
+        setting.id = m_settings[i].varName + "-boolSetting";
+        setting.name = m_settings[i].displayName;
+        if(m_settings[i].defaultValue == true) {
+                setting.checked = true;
+        } else {
+                setting.checked = false;
+        };
+        setTimeout(function() {
+                if(document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
+                        document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(br);
+                }
+                document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(setting);
+                document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(label);
+        },10);
+}
+
+function drawIntSetting(i) {
+        let br = document.createElement("br");
+        let setting = document.createElement("input");
+        let label = document.createElement('label');
+        label.for = m_settings[i].varName + "-intSetting";
+        label.innerHTML = m_settings[i].displayName + ": " + m_settings[i].defaultValue;
+        label.style.fontFamily = "arial";
+        label.id = m_settings[i].varName + "-intSetting-label";
+        setting.type = "range";
+        setting.id = m_settings[i].varName + "-intSetting";
+        setting.name = m_settings[i].displayName;
+        setting.value = m_settings[i].defaultValue;
+        setting.min = m_settings[i].minValue;
+        setting.max = m_settings[i].maxValue;
+        setTimeout(function() {
+                if(document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
+                        document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(br);
+                }
+                document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(setting);
+                document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(label);
+                document.getElementById(m_settings[i].varName + "-intSetting").addEventListener('change', function() {
+                        document.getElementById(m_settings[i].varName + "-intSetting-label").innerHTML = m_settings[i].displayName + ": " + document.getElementById(m_settings[i].varName + "-intSetting").value;
+                })
+        },100);
+}
+
+
+function buildHMSClientScreenSettings() {
+        for(i=0;i<m_settings.length;i++) {
+                if(m_settings[i].settingType == "int") {
+                        drawIntSetting(i);
+                } else if(m_settings[i].settingType == "bool") {
+                        drawBoolSetting(i);
+                }
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+//backend stuff:
+
+
+
 
 function notifySuccessfullInjection() {
         //success inject notifier
@@ -188,6 +321,7 @@ function toggleHMSClientScreen() {
                 document.body.style.overflow = "";
         };
 }
+
 
 //allows the window to be draggable:
 function dragElement(elmnt) {

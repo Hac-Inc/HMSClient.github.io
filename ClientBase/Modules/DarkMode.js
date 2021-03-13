@@ -5,12 +5,12 @@ class DarkMode extends module {
                 this.ModuleId = "DarkMode";
                 this.category = "page";
                 this.tooltip = "Makes the body element dark. *MAY NOT WORK ON ALL SITES*";
-                //this.hasSettings = true;
-                //this.registerBoolSetting(this.ModuleId, "Super Dark Mode", "darkmode_superdark", false);
+                this.hasSettings = true;
+                registerBoolSetting(this.ModuleId, "Super Dark Mode", "darkmode_superdark", false);
         }
         execute() {
                 document.body.style='background:#292a2d';
-                //if(this.boolSetting("darkmode_superdark")) {
+                if(boolSetting("darkmode_superdark")) {
                         let d = document.getElementsByTagName('div');
                         let p = document.getElementsByTagName('p');
                         for(i=0;i<d.length;i++) {
@@ -23,6 +23,6 @@ class DarkMode extends module {
                                 p[i].style.color = "white";
                                 p[i].style.backgroundColor = "#454545";
                         }
-                //}
+                }
         }
 }

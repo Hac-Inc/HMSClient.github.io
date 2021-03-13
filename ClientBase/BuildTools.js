@@ -49,6 +49,7 @@ function newButton(id, DisplayName, moduleListId, hoverText, backgroundColor, bo
         button.style.borderWidth = "2px";
         button.style.borderColor = borderColor;
         button.style.outline = "none";
+        button.style.cursor = "pointer";
         setTimeout(
                 function() {
                         document.getElementById(id).addEventListener('click', function() {modules[moduleListId].toggle()})
@@ -144,4 +145,36 @@ function newTextBlock(id, innerHTML, textColor, backgroundColor, borderColor, he
                 }, 100
         )
         return div;
+}
+
+
+
+
+
+//draw functions:
+
+function drawArrayListModule(moduleId, displayName) {
+        let br = document.createElement('div');
+        br.id = moduleId + "-moduleArrayListItemBr";
+        if(document.getElementById("HMSClientModuleArrayList")?.hasChildNodes()) {
+                document.getElementById("HMSClientModuleArrayList")?.appendChild(br);
+        };
+        let x = document.createElement('div');
+        x.id = moduleId + "-moduleArrayListItemDiv";
+        x.innerHTML = displayName;
+        x.style.color = D_ui_border_C;
+        x.style.fontFamily = "arial"
+        x.style.borderRight = "solid";
+        x.style.borderColor = D_ui_border_C;
+        x.style.borderWidth = "4px;";
+        x.style.padding = "3px";
+        x.style.textAlign = "right";
+        let s = document.createElement('div');
+        s.id = moduleId + "-moduleArrayListItem";
+        document.getElementById("HMSClientModuleArrayList")?.appendChild(s);
+        document.getElementById(moduleId + "-moduleArrayListItem")?.appendChild(x);
+}
+function removeArrayListModule(moduleId) {
+        document.getElementById(moduleId + "-moduleArrayListItem")?.remove();
+        document.getElementById(moduleId + "-moduleArrayListItemBr")?.remove();
 }
