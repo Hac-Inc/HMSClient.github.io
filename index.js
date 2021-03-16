@@ -57,6 +57,20 @@ const module_sub_categorys = [
 ]
 
 
+
+//color defaults
+var D_ui_background_C = "#525252";
+var D_ui_border_C = "#00ff15";
+if(injectMode == "Premium") {
+        D_ui_border_C = "#ff0000";
+}
+var D_button_background_C = "#616161";
+var D_button_border_C = "#00ff15";
+if(injectMode == "Premium") {
+        D_button_border_C = "#ff0000";
+}
+
+
 //constructs all the elements into one and builds the client
 function buildHMSClient() {
         let x = document.createElement('div');
@@ -80,7 +94,7 @@ function buildHMSClient() {
         //creates the categories:
         for(i=0;i<module_categorys.length;i++) {
                 document.getElementById("HMSClientWindow").appendChild(newDiv(module_categorys[i] + "-categoryHolder"));
-                document.getElementById(module_categorys[i] + "-categoryHolder").appendChild(newTextBlock(module_categorys[i] + "-categoryHeader", module_categorys[i], "lime"))
+                document.getElementById(module_categorys[i] + "-categoryHolder").appendChild(newTextBlock(module_categorys[i] + "-categoryHeader", module_categorys[i], D_ui_border_C))
                 document.getElementById(module_categorys[i] + "-categoryHolder").appendChild(newFancyDiv(module_categorys[i] + "-category"))
                 let br = document.createElement('div');
                 br.style.backgroundColor = "#303030";
@@ -130,7 +144,7 @@ function buildHMSClientScreen() {
         //creates the categories:
         for(i=0;i<module_categorys.length;i++) {
                 document.getElementById("HMSClientScreen").appendChild(newDiv(module_categorys[i] + "-categoryHolderS"));
-                document.getElementById(module_categorys[i] + "-categoryHolderS").appendChild(newTextBlock(module_categorys[i] + "-categoryHolderS-header", module_categorys[i], "lime"))
+                document.getElementById(module_categorys[i] + "-categoryHolderS").appendChild(newTextBlock(module_categorys[i] + "-categoryHolderS-header", module_categorys[i], D_ui_border_C))
                 document.getElementById(module_categorys[i] + "-categoryHolderS").appendChild(newFancyDiv(module_categorys[i] + "-categoryS"))
                 document.getElementById(module_categorys[i] + "-categoryHolderS").style.display = "inline-block";
                 document.getElementById(module_categorys[i] + "-categoryHolderS").style.verticalAlign = "top";
@@ -155,7 +169,7 @@ function buildHMSClientScreen() {
                 d.id = modules[i].getModuleId() + "-moduleS-container";
                 if(modules[i].hasSettings == true) {
                         d.style.borderLeft = "solid";
-                        d.style.borderColor = "#00ff15";
+                        d.style.borderColor = D_ui_border_C;
                         d.style.borderWidth = "2px";
                 }
                 let s = document.createElement('div');
@@ -174,10 +188,10 @@ function buildHMSClientScreen() {
 
 
         //watermark:
-        let w = newTextBlock("HMSClientWatermark", "<h2>HMS Client<h2>", "lime", null, null, "25px");
+        let w = newTextBlock("HMSClientWatermark", "<h2 style='display:inline-block'>HMS Client </h2><p style='display:inline-block'><sub> Public</sub></p>", D_ui_border_C, null, null, "25px");
         switch(injectMode) {
                 case "live":
-                        w.innerHTML = "<h2>HMS Client<h2>";
+                        w.innerHTML = "<h2 style='display:inline-block'>HMS Client </h2><p style='display:inline-block'><sub> Public</sub></p>";
                         break;
                 case "liveDebug":
                         w.innerHTML = "<h2 style='display:inline-block'>HMS Client </h2><p style='display:inline-block'><sub> Dev</sub></p>";
@@ -185,6 +199,8 @@ function buildHMSClientScreen() {
                 case "dev":
                         w.innerHTML = "<h2 style='display:inline-block'>HMS Client </h2><p style='display:inline-block'><sub> Dev</sub></p>";
                         break;
+                case "Premium":
+                        w.innerHTML = "<h2 style='display:inline-block'>HMS Client </h2><p style='display:inline-block'><sub> Premium</sub></p>"
 
         }
         w.style.position = "absolute";
@@ -312,7 +328,7 @@ function buildHMSClientScreenSettings() {
 
 function notifySuccessfullInjection() {
         //success inject notifier
-        document.body.appendChild(newTextBlock("SuccessInjectClient", "HMS Client sucessfully injected! Press the ` key on your keyboard to open the HUD menu.", "lime", null, null, 100, 200, "absolute"));
+        document.body.appendChild(newTextBlock("SuccessInjectClient", "HMS Client sucessfully injected! Press the ` key on your keyboard to open the HUD menu.", D_ui_border_C, null, null, 100, 200, "absolute"));
         document.getElementById("SuccessInjectClient").style.top = "5px";
         document.getElementById("SuccessInjectClient").style.zIndex = "99999";
         setTimeout(
