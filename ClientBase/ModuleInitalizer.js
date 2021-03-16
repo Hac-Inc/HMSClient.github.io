@@ -48,7 +48,7 @@ function initModules() {
 
 
 
-
+                        notifySuccessfullInjection();
                         return;
                 } else if(injectMode == "Premium" || injectMode == "dev" || injectMode == "liveDebug") {
 
