@@ -3,6 +3,19 @@ let modules = [];
 var m_settings = [];
 
 
+//color defaults
+var D_ui_background_C = "#525252";
+var D_ui_border_C = "#00ff15";
+if(injectMode == "Premium") {
+        D_ui_border_C = "#ff0000";
+}
+var D_button_background_C = "#616161";
+var D_button_border_C = "#00ff15";
+if(injectMode == "Premium") {
+        D_button_border_C = "#ff0000";
+}
+
+
 class module {
 
         
@@ -58,8 +71,8 @@ class module {
                                 this.active = true;
                                 this.onActivate();
                                 this.onToggle();
-                                document.getElementById(this.ModuleId + "-module").style.color = "#00ff15";
-                                document.getElementById(this.ModuleId + "-moduleS").style.color = "#00ff15";
+                                document.getElementById(this.ModuleId + "-module").style.color = D_ui_border_C;
+                                document.getElementById(this.ModuleId + "-moduleS").style.color = D_ui_border_C;
                                 drawArrayListModule(this.ModuleId, this.ModuleName);
                         } else if(this.active == true) {
                                this.active = false;

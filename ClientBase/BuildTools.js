@@ -1,9 +1,14 @@
 //color defaults
 var D_ui_background_C = "#525252";
 var D_ui_border_C = "#00ff15";
+if(injectMode == "Premium") {
+        D_ui_border_C = "#ff0000";
+}
 var D_button_background_C = "#616161";
 var D_button_border_C = "#00ff15";
-
+if(injectMode == "Premium") {
+        D_button_border_C = "#ff0000";
+}
 
 function newDiv(id, innerHTML, hoverText) {
         let div = document.createElement('div');
@@ -61,7 +66,7 @@ function newButton(id, DisplayName, moduleListId, hoverText, backgroundColor, bo
                                                 document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-setting-container").style.display = "";
                                                 document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-container").style.borderLeft = "solid";
                                                 document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-container").style.borderWidth = "5px";
-                                                document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-container").style.borderColor = "#00ff15";
+                                                document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-container").style.borderColor = D_ui_border_C;
                                         } else {
                                                 document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-setting-container").style.display = "none";
                                                 document.getElementById(modules[moduleListId].getModuleId() + "-moduleS-container").style.borderWidth = "2px";
