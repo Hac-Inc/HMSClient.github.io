@@ -33,28 +33,31 @@ let devTools_Subcategory = new module_sub_category("dev_tools", "devTools", "Too
 //let premium_visual_Subcategory = new module_sub_category("premium_visual", "premium", "Visual");
 
 
-const module_categorys = [
+var module_categorys = [
         "visual",
         "misc",
-        "quiz",
         "games",
         "devTools"
-
-        //"premium"
 ]
 //when assigning a category to a module, you must use the name of a module sub category, not just the category name.
-const module_sub_categorys = [
+var module_sub_categorys = [
         hud_Subcategory,
         page_Subcategory,
         misc_Subcategory,
         tab_Subcategory,
-        membean_Subcategory,
         paperclips_Subcategory,
         spaceplan_Subcategory,
         devTools_Subcategory
-        
-        //premium_visual_Subcategory
 ]
+
+//add the premium categorys if its premium mode:
+if(injectMode == "Premium" || injectMode == "dev" || injectMode == "liveDebug") {
+        //categories:
+        module_categorys.push("quiz");
+
+        //subcategories:
+        module_sub_categorys.push(membean_Subcategory);
+}
 
 
 
