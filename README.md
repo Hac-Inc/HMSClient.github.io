@@ -8,7 +8,7 @@
   About
 </h2>
 <p>
-  This is a web browser hack client designed and upkept for use on Hudson School District Chromebooks, although some of the hacks may be useful outside of that area.
+  This is a web browser hack client designed and upkept for use on chromebooks, although some of the hacks may be useful outside of that area.
 </p>
 <p>
   If you have any questions about how to use the client or its features, please visit the wiki or ask for help in the discord, linked below.
