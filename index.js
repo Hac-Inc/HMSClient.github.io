@@ -175,6 +175,18 @@ function buildHMSClientScreen() {
 
         //watermark:
         let w = newTextBlock("HMSClientWatermark", "<h2>HMS Client<h2>", "lime", null, null, "25px");
+        switch(injectMode) {
+                case "live":
+                        w.innerHTML = "<h2>HMS Client<h2>";
+                        break;
+                case "liveDebug":
+                        w.innerHTML = "<h2 style='display:inline-block'>HMS Client </h2><p style='display:inline-block'><sub> Dev</sub></p>";
+                        break;
+                case "dev":
+                        w.innerHTML = "<h2 style='display:inline-block'>HMS Client </h2><p style='display:inline-block'><sub> Dev</sub></p>";
+                        break;
+
+        }
         w.style.position = "absolute";
         w.style.left = "";
         w.style.top = "";
