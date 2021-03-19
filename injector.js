@@ -28,7 +28,9 @@ const client_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/HudArrayList.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DevListenerLogger.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DevFunctionLogger.js',
-        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/XrayGoggles.js'
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/XrayGoggles.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/PaperclipsStage1.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/PaperclipsStage2.js'
 
 ]
 
@@ -59,7 +61,9 @@ const client_dev_files = [
         'ClientBase/Modules/HudArrayList.js',
         'ClientBase/Modules/DevListenerLogger.js',
         'ClientBase/Modules/DevFunctionLogger.js',
-        'ClientBase/Modules/XrayGoggles.js'
+        'ClientBase/Modules/XrayGoggles.js',
+        'ClientBase/Modules/PaperclipsStage1.js',
+        'ClientBase/Modules/PaperclipsStage2.js'
 
 ]
 
@@ -90,7 +94,9 @@ const client_debug_files = [
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/HudArrayList.js',
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/DevListenerLogger.js',
         'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/DevFunctionLogger.js',
-        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/XrayGoggles.js'
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/XrayGoggles.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/PaperclipsStage1.js',
+        'https://hac-inc.github.io/HMSClientDebug.github.io/ClientBase/Modules/PaperclipsStage2.js'
 
 ]
 
@@ -121,7 +127,9 @@ const client_premium_files = [
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/HudArrayList.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DevListenerLogger.js',
         'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/DevFunctionLogger.js',
-        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/XrayGoggles.js'
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/XrayGoggles.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/PaperclipsStage1.js',
+        'https://hac-inc.github.io/HMSClient.github.io/ClientBase/Modules/PaperclipsStage2.js'
 
 ]
 
