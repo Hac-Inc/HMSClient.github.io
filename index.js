@@ -250,6 +250,16 @@ function intSetting(setting) {
 }
 
 
+function registerEnumSetting(tiedModuleId, displayName, varName, defaultValue, values) {
+        let setting = new m_enumSetting(tiedModuleId, displayName, varName, defaultValue, values)
+        m_settings.push(setting);
+};
+
+function enumSetting(setting) {
+        let value = document.getElementById(setting + "-enumSetting").value
+        return value;
+}
+
 
 
 
@@ -303,13 +313,43 @@ function drawIntSetting(i) {
         },100);
 }
 
+function drawEnumSetting(i) {
+        let br = document.createElement("br")
+        let setting = document.createElement("select")
+        let label = document.createElement('label')
+        label.for = m_settings[i].varName + "-enumSetting";
+        label.innerHTML = m_settings[i].displayName
+        label.style.fontFamily = "arial"
+        label.id = m_settings[i].varName + "-enumSetting-label"
+        setting.id = m_settings[i].varName + "-enumSetting"
+        setting.name = m_settings[i].displayName
+        setting.style.outline = "none";
+        setTimeout(function () {
+                if (document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
+                        document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(br)
+                }
+                document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(setting)
+                let settingsList = m_settings[i].values;
+                for (x = 0; x < settingsList.length; x++) {
+                        let f = document.createElement("option")
+                        f.innerHTML = settingsList[x]
+                        f.value = settingsList[x];
+                        document.getElementById(m_settings[i].varName + "-enumSetting").appendChild(f)
+                }
+                document.getElementById(m_settings[i].tiedModuleId + "-moduleS-setting-container").appendChild(label)
+        }, 100)
+        
+}
+
 
 function buildHMSClientScreenSettings() {
         for(i=0;i<m_settings.length;i++) {
-                if(m_settings[i].settingType == "int") {
-                        drawIntSetting(i);
-                } else if(m_settings[i].settingType == "bool") {
-                        drawBoolSetting(i);
+                if (m_settings[i].settingType == "int") {
+                        drawIntSetting(i)
+                } else if (m_settings[i].settingType == "bool") {
+                        drawBoolSetting(i)
+                } else if (m_settings[i].settingType == "enum") {
+                        drawEnumSetting(i);
                 }
         }
 }
