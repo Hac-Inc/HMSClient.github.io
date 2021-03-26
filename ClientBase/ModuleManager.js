@@ -112,29 +112,6 @@ class m_boolSetting {
                 this.defaultValue = defaultValue;
                 this.settingType = "bool";
         }
-        draw() {
-                let br = document.createElement("br");
-                let setting = document.createElement("input");
-                let label = document.createElement('label');
-                label.for = this.varName + "-boolSetting";
-                label.innerHTML = this.displayName;
-                label.style.fontFamily = "arial";
-                setting.type = "checkbox";
-                setting.id = this.varName + "-boolSetting";
-                setting.name = this.displayName;
-                if(this.defaultValue == true) {
-                        setting.checked = true;
-                } else {
-                        setting.checked = false;
-                };
-                setTimeout(function() {
-                        if(document.getElementById(this.tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
-                                document.getElementById(this.tiedModuleId + "-moduleS-setting-container").appendChild(br);
-                        }
-                        document.getElementById(this.tiedModuleId + "-moduleS-setting-container").appendChild(setting);
-                        document.getElementById(this.tiedModuleId + "-moduleS-setting-container").appendChild(label);
-                },10);
-        }
 }
 
 class m_intSetting {
@@ -147,30 +124,17 @@ class m_intSetting {
                 this.maxValue = maxValue;
                 this.settingType = "int";
         }
-        draw() {
-                let br = document.createElement("br");
-                let setting = document.createElement("input");
-                let label = document.createElement('label');
-                label.for = this.varName + "-intSetting";
-                label.innerHTML = this.displayName + ": " + this.defaultValue;
-                label.style.fontFamily = "arial";
-                label.id = this.varName + "-intSetting-label";
-                setting.type = "range";
-                setting.id = this.varName + "-intSetting";
-                setting.name = this.displayName;
-                setting.value = this.defaultValue;
-                setting.min = this.minValue;
-                setting.max = this.maxValue;
-                setTimeout(function() {
-                        if(document.getElementById(this.tiedModuleId + "-moduleS-setting-container").hasChildNodes()) {
-                                document.getElementById(this.tiedModuleId + "-moduleS-setting-container").appendChild(br);
-                        }
-                        document.getElementById(this.tiedModuleId + "-moduleS-setting-container").appendChild(setting);
-                        document.getElementById(this.tiedModuleId + "-moduleS-setting-container").appendChild(label);
-                        document.getElementById(this.varName + "-intSetting").addEventListener('change', function() {
-                                document.getElementById(this.varName + "-intSetting-label").innerHTML = this.displayName + ": " + document.getElementById(this.varName + "-intSetting").value;
-                        })
-                },10);
+}
+
+
+//the default value will be the first option you put in the values list
+class m_enumSetting {
+        constructor(tiedModuleId, displayName, varName, valuesList) {
+                this.tiedModuleId = tiedModuleId
+                this.displayName = displayName
+                this.varName = varName
+                this.values = valuesList
+                this.settingType = "enum"
         }
 }
 
