@@ -10,6 +10,12 @@ class TestModule extends module {
 
                 registerBoolSetting(this.ModuleId, "Test Bool", "testBool_test", true);
                 registerIntSetting(this.ModuleId, "Test Int", "testInt_test", 0, -10, 10);
+                registerEnumSetting(this.ModuleId, "Test Enum", "testEnum_test", [
+                        "Mode 1",
+                        "Mode 2",
+                        "Mode 3",
+                        "Mode 4"
+                ]);
         }
         execute() {
                 console.log("this is a toggleable module");
