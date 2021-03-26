@@ -38,7 +38,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(boolSetting("esp_textareas")) {
+                if(boolSetting("esp_textarea")) {
                         let t = document.getElementsByTagName("textarea");
                         for(i=0;i<t.length;i++) {
                                 t[i].style.border = "solid";
@@ -86,7 +86,7 @@ class InputEsp extends module {
                         }
                 }
                 
-                if(boolSetting("esp_textareas")) {
+                if(boolSetting("esp_textarea")) {
                         let t = document.getElementsByTagName("textarea");
                         for(i=0;i<t.length;i++) {
                                 t[i].style.border = "none";
