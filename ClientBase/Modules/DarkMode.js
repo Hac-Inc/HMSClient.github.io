@@ -6,11 +6,15 @@ class DarkMode extends module {
                 this.category = "page";
                 this.tooltip = "Makes the body element dark. *MAY NOT WORK ON ALL SITES*";
                 this.hasSettings = true;
-                registerBoolSetting(this.ModuleId, "Super Dark Mode", "darkmode_superdark", false);
+                //registerBoolSetting(this.ModuleId, "Super Dark Mode", "darkmode_superdark", false);
+                registerEnumSetting(this.ModuleId, "Mode", "darkmode_superdark", [
+                        "Only Background",
+                        "Super Dark"
+                ]);
         }
         execute() {
                 document.body.style='background:#292a2d';
-                if(boolSetting("darkmode_superdark")) {
+                if(enumSetting("darkmode_superdark") === "Super Dark") {
                         let d = document.getElementsByTagName('div');
                         let p = document.getElementsByTagName('p');
                         for(i=0;i<d.length;i++) {
