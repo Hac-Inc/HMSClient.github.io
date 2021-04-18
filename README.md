@@ -8,6 +8,8 @@
   About
 </h2>
 <p>
+  Notice: This project is not under active development at the moment. Pull requests will still be reviewed.
+  <br>
   This is a web browser hack client designed and upkept for use on chromebooks, although some of the hacks may be useful outside of that area.
 </p>
 <p>
