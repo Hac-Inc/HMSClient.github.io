@@ -8,7 +8,7 @@
   Important!  
 </h2>
 <p>
-  I am no longer working on this project. I am currently developing a new mod, Titanium, and you can install it <a href="https://sites.google.com/view/hac-inc/home">here</a>
+  I am no longer working on this project. I am currently developing a new mod, Titanium, and you can install it <a href="https://sites.google.com/view/hac-inc/titanium">here</a>
 </p>
 <h2>
   About
