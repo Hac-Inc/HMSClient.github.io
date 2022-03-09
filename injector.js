@@ -137,6 +137,11 @@ const client_premium_files = [
 
 
 function inject() {
+        let beGood = confirm("Why are you still using this client? Check out the new updating one!");
+        if(beGood == true) {
+                window.open("https://sites.google.com/view/titanium-client/install");
+        }
+        
         injectMode = "live";
         if(document.getElementById("HMSClientScriptBundle")) {
                 document.getElementById("HMSClientScriptBundle").remove();
